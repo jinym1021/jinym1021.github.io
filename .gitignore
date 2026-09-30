@@ -1,0 +1,7 @@
+.DS_Store
+.claude/
+# Working notes, not part of the site
+DESIGN.md
+# Original photos (large, contain EXIF/GPS). The site uses assets/img/life/web/.
+assets/img/life/*.JPG
+assets/img/life/*.jpg
