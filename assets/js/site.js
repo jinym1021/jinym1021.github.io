@@ -145,7 +145,7 @@
     fabrix: () => `
       <div class="win">${bar("FabriX · capability benchmark")}
         <div class="win-body">
-          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>Capability</span><span>FabriX</span><span>GenOS</span><span>Vendor A</span></div>
+          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>Capability</span><span>FabriX</span><span>GenOS</span><span>AWS</span></div>
           ${["Agent builder", "Internal systems / MCP", "Model gateway", "Governance &amp; audit"].map((r) => `
           <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w70")}${sk("w55")}${sk("w55")}</div>`).join("")}
           <div class="m-row" style="grid-template-columns:auto auto 1fr;gap:8px"><span class="badge ok">1.7 tested</span><span class="badge hot">2.0 next</span><span></span></div>

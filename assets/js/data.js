@@ -124,7 +124,7 @@ const en = {
             "Lead PoCs for the AI platforms usable on the group's Internal Business Network: M365 Copilot from pre-adoption PoC through post-adoption support (2026.07–09), and FabriX (Samsung SDS's in-house AI platform) across its 1.7 and 2.0 updates",
             "Scoped M365 license tiers (E3/E5) and features before 4 affiliates confirmed adoption, including the security features regulators expect as audit evidence; tested Work IQ early and wrote setup guides",
             "Set up a working council across 4 affiliates to share how each handles policy and find issues to tackle jointly; after adoption, interviewed owners and power users and escalated common issues to Microsoft",
-            "Tested FabriX 1.7 usability and new features (including MCP integration with Confluence) and projected 2.0 features from the vendor briefing; reported, then benchmarked it against affiliates' own AI platforms (GenOS, Vendor A) with capabilities scored",
+            "Tested FabriX 1.7 usability and new features (including MCP integration with Confluence) and projected 2.0 features from the vendor briefing; reported, then benchmarked it against affiliates' own AI platforms (GenOS, AWS) with capabilities scored",
             "Co-produce A.TechFlow, the internal monthly AI technology newsletter, in a team of 3: planning, editing and writing (#10–#13, 2026.06–)",
           ],
         },
@@ -246,17 +246,17 @@ const en = {
       role: "PoC lead — hands-on testing, feature analysis, benchmarking, reporting",
       featured: true,
       summary:
-        "Testing FabriX, the Samsung SDS AI platform the group runs on its Internal Business Network, through its 1.7 and 2.0 updates, and scoring it against the AI platforms affiliates run on their own (GenOS and Vendor A).",
+        "Testing FabriX, the Samsung SDS AI platform the group runs on its Internal Business Network, through its 1.7 and 2.0 updates, and scoring it against the AI platforms affiliates run on their own (GenOS and AWS).",
       problem:
         "FabriX had been in use since 2024 and was moving through a 1.7 update toward 2.0. Affiliates also ran AI platforms of their own, and nobody had one picture of what FabriX could actually do inside a financial network or where it overlapped with what they already had.",
       approach:
-        "Test 1.7 hands-on, project 2.0 from the vendor briefing, map every capability against the constraints of a regulated network, and score FabriX against GenOS and Vendor A.",
+        "Test 1.7 hands-on, project 2.0 from the vendor briefing, map every capability against the constraints of a regulated network, and score FabriX against GenOS and AWS.",
       metrics: [
         { value: "1.7", label: "tested hands-on" },
         { value: "2.0", label: "features projected ahead of release" },
-        { value: "2", label: "affiliate platforms benchmarked (GenOS, Vendor A)" },
+        { value: "2", label: "affiliate platforms benchmarked (GenOS, AWS)" },
       ],
-      stack: ["FabriX", "GenOS", "MCP", "Confluence"],
+      stack: ["FabriX", "GenOS", "AWS", "MCP", "Confluence"],
       links: [],
       sections: [
         {
@@ -277,7 +277,7 @@ const en = {
           heading: "Output",
           bullets: [
             "Report on 1.7 testing and the expected 2.0 features",
-            "Benchmark of FabriX against the AI platforms affiliates run on their own (GenOS, Vendor A), with capabilities scored",
+            "Benchmark of FabriX against the AI platforms affiliates run on their own (GenOS, AWS), with capabilities scored",
           ],
         },
       ],
@@ -1021,7 +1021,7 @@ const ko = {
             "금융 3호망(내부 업무망)에서 쓸 수 있는 그룹 AI 플랫폼 PoC 담당: M365 Copilot 도입 전 PoC부터 도입 후 지원까지(2026년 7~9월), 삼성SDS 사내 AI 플랫폼 FabriX의 1.7·2.0 업데이트 분석",
             "4개 관계사 M365 도입 확정 전 라이선스(E3/E5)와 기능 범위 파악(금융 감독 증적에 필요한 보안 기능 포함), Work IQ 등 기능 선제 테스트 및 가이드 제작",
             "4개 관계사 실무 협의체를 마련해 정책 대응 방식을 공유하고 공동 대응할 이슈 발굴, 도입 후에는 담당자·파워유저 인터뷰와 Microsoft 이슈 에스컬레이션",
-            "FabriX 1.7 사용성·신규 기능 테스트(Confluence MCP 연결 포함), 설명회 내용 기반으로 2.0 기능 분석·예상 정리 후 보고, 관계사 자체 AI 플랫폼(GenOS, A사)과 비교해 기능성 수치화",
+            "FabriX 1.7 사용성·신규 기능 테스트(Confluence MCP 연결 포함), 설명회 내용 기반으로 2.0 기능 분석·예상 정리 후 보고, 관계사 자체 AI 플랫폼(GenOS, AWS)과 비교해 기능성 수치화",
             "사내 월간 AI 기술 뉴스레터 A.TechFlow 3인 공동 제작: 기획·편집·집필(10~13호, 2026년 6월~)",
           ],
         },
@@ -1110,10 +1110,10 @@ const ko = {
       period: "2026.08 – 현재",
       org: "삼성금융 AI센터",
       role: "PoC 담당 — 기능 테스트, 기능 분석, 비교 평가, 보고",
-      summary: "그룹이 3호망(내부 업무망)에서 쓰는 삼성SDS AI 플랫폼 FabriX를 1.7과 2.0 업데이트에 맞춰 테스트하고, 관계사 자체 AI 플랫폼(GenOS, A사)과 비교해 기능성을 수치화했습니다.",
+      summary: "그룹이 3호망(내부 업무망)에서 쓰는 삼성SDS AI 플랫폼 FabriX를 1.7과 2.0 업데이트에 맞춰 테스트하고, 관계사 자체 AI 플랫폼(GenOS, AWS)과 비교해 기능성을 수치화했습니다.",
       problem: "FabriX는 2024년부터 쓰고 있었고 1.7을 거쳐 2.0 업데이트를 앞두고 있었습니다. 관계사마다 자체 AI 플랫폼도 따로 운영하고 있어서, 금융망 안에서 FabriX가 실제로 무엇을 할 수 있는지, 기존 플랫폼과 어디서 겹치는지 한눈에 보여주는 자료가 없었습니다.",
-      approach: "1.7을 직접 써 보고, 설명회 내용으로 2.0을 예상 분석하고, 모든 기능을 규제망 제약에 대입한 뒤 관계사 플랫폼인 GenOS, A사와 점수로 비교했습니다.",
-      metrics: [{ label: "직접 테스트" }, { label: "출시 전 기능 예상 분석" }, { label: "관계사 플랫폼과 비교(GenOS, A사)" }],
+      approach: "1.7을 직접 써 보고, 설명회 내용으로 2.0을 예상 분석하고, 모든 기능을 규제망 제약에 대입한 뒤 관계사 플랫폼인 GenOS, AWS와 점수로 비교했습니다.",
+      metrics: [{ label: "직접 테스트" }, { label: "출시 전 기능 예상 분석" }, { label: "관계사 플랫폼과 비교(GenOS, AWS)" }],
       sections: [
         {
           heading: "FabriX 1.7 테스트",
@@ -1133,7 +1133,7 @@ const ko = {
           heading: "산출물",
           bullets: [
             "1.7 테스트와 2.0 예상 기능 보고",
-            "관계사 자체 AI 플랫폼(GenOS, A사)과 FabriX를 비교한 기능성 수치화",
+            "관계사 자체 AI 플랫폼(GenOS, AWS)과 FabriX를 비교한 기능성 수치화",
           ],
         },
       ],
