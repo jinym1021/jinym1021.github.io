@@ -226,7 +226,7 @@ img { max-width: 100%; display: block; }
 .skill-row { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); align-items: baseline; }
 .skill-row:last-child { border-bottom: 1px solid var(--line); }
 .skill-row .k { font-weight: 700; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips { display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 8px; }
 .chip { font-size: 15px; padding: 5px 13px; border-radius: 999px; background: var(--lilac); color: var(--ink-2); }
 @media (max-width: 760px) { .skill-row { grid-template-columns: 1fr; gap: 10px; } }
 

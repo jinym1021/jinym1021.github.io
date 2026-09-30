@@ -142,12 +142,21 @@
   const bar = (title) => `<div class="win-bar"><i></i><i></i><i></i><b>${title}</b></div>`;
   const sk = (w) => `<span class="sk ${w}"></span>`;
   const MOCKS = {
-    poc: () => `
-      <div class="win">${bar("Platform review")}
+    fabrix: () => `
+      <div class="win">${bar("FabriX · capability benchmark")}
         <div class="win-body">
-          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr"><span>Capability</span><span>M365 Copilot</span><span>FabriX</span></div>
-          ${["Agent builder", "Internal systems / MCP", "Model routing", "Governance &amp; audit", "Rollout scope"].map((r) => `
-          <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w70")}${sk("w55")}</div>`).join("")}
+          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>Capability</span><span>FabriX</span><span>GenOS</span><span>AWS</span></div>
+          ${["Agent builder", "Internal systems / MCP", "Model gateway", "Governance &amp; audit"].map((r) => `
+          <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w70")}${sk("w55")}${sk("w55")}</div>`).join("")}
+          <div class="m-row" style="grid-template-columns:auto auto 1fr;gap:8px"><span class="badge ok">1.7 tested</span><span class="badge hot">2.0 next</span><span></span></div>
+        </div>
+      </div>`,
+    m365: () => `
+      <div class="win">${bar("M365 Copilot · adoption")}
+        <div class="win-body">
+          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr"><span>Feature</span><span>E3</span><span>E5</span></div>
+          ${["Copilot Chat", "Work IQ", "DLP", "Log retention"].map((r) => `
+          <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w55")}${sk("w70")}</div>`).join("")}
           <div class="m-row" style="grid-template-columns:repeat(4,auto) 1fr;gap:8px">${["Life", "Fire", "Card", "Securities"].map((a) => `<span class="badge hot">${a}</span>`).join("")}<span></span></div>
         </div>
       </div>`,
