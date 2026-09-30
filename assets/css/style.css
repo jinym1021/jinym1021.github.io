@@ -383,3 +383,17 @@ img { max-width: 100%; display: block; }
 .prog { display: block; height: 8px; border-radius: 4px; background: var(--skeleton); overflow: hidden; }
 .prog i { display: block; height: 100%; background: var(--grad); }
 .job .org-note { color: var(--muted); font-size: 16px; margin-top: 4px; }
+/* Mocks: never split words mid-way (the Korean body rule allows it for long text) */
+.win, .win * { overflow-wrap: normal; word-break: normal; }
+@media (max-width: 480px) {
+  .win { font-size: 11.5px; }
+  .win-body { padding: 14px; }
+  .m-card { padding: 10px; }
+  .m-grid { gap: 8px; }
+  .node { padding: 8px 9px; }
+  .node, .badge { white-space: nowrap; }
+}
+/* backdrop-filter makes the header the containing block for the fixed overlay,
+   which then collapses to the header's height. Drop it while the menu is open. */
+.menu-open .site-header { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--bg); }
+.menu-open { overflow: hidden; }

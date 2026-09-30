@@ -1101,7 +1101,7 @@ const ko = {
       problem: "Copilot 관련 질문 1위는 “저장했는데 왜 안 나와요?”였습니다. 프로필·OneDrive·SharePoint 변경이 Copilot에 반영되기까지 얼마나 걸리는지, 어떤 파일 습관이 도움이 되는지 아무도 몰랐습니다.",
       approach: "직접 쟀습니다. 삼성생명 M365 테넌트에서 PoC를 돌려 변경 사항별 Copilot Chat 반영 시간을 측정했고, 그 결과를 체크리스트형 세팅 가이드와 팀 파일 규칙으로 만들었습니다.",
       metrics: [
-        { label: "측정한 리드타임 항목" },
+        { value: "14개", label: "측정한 리드타임 항목" },
         { value: "12개", label: "파일 관리 규칙" },
         { value: "약 30분", label: "첫 세팅 시간, 관리자 권한 불필요" },
       ],

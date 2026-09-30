@@ -202,7 +202,7 @@
       <div class="win">${bar("AI Center Portal")}
         <div class="win-body">
           <div class="m-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:14px">
-            ${["Projects", "Agents", "Avg. AI maturity"].map((t) => `<div class="m-card"><span>${t}</span>${sk("w40")}<span class="spark"></span></div>`).join("")}
+            ${["Projects", "Agents", "AI maturity"].map((t) => `<div class="m-card"><span>${t}</span>${sk("w40")}<span class="spark"></span></div>`).join("")}
           </div>
           <div class="m-row m-head" style="grid-template-columns:1.4fr .8fr 1.2fr"><span>Project</span><span>Status</span><span>Progress</span></div>
           ${[[70, "ok", "Done"], [45, "hot", "In progress"], [20, "", "Planned"]].map(([w, c, t]) => `
