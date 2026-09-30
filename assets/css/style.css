@@ -27,8 +27,8 @@
   --window-line: #e7e7ee;
   --skeleton: #e9e9f0;
 
-  --f-sans: "Figtree", "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-  --f-title: "Playfair Display", "Noto Serif KR", Georgia, serif;
+  --f-sans: "Figtree", "SUIT", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  --f-title: "Playfair Display", "Nanum Myeongjo", Georgia, serif;
 
   --w: 1080px;
   --gutter: 24px;
