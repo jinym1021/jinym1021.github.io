@@ -39,6 +39,7 @@
   header.className = "site-header";
   const footer = document.createElement("footer");
   footer.className = "site-footer";
+  footer.id = "connect";
   const toTop = document.createElement("button");
   toTop.className = "to-top";
   toTop.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 15l6-6 6 6"/></svg>`;
@@ -62,7 +63,6 @@
       ["about.html", "about"],
       ["experience.html", "experience"],
       ["projects.html", "projects"],
-      ["contact.html", "contact"],
     ];
     const links = nav.map(([h, k]) => `<a href="${h}" ${k === active ? 'aria-current="page"' : ""}>${U.nav[k]}</a>`).join("");
     header.innerHTML = `
@@ -97,15 +97,15 @@
 
     footer.innerHTML = `
       <div class="wrap">
-        <p class="big">${U.chrome.footer}<br/><a href="mailto:${P.email}">${esc(P.email)}</a></p>
-        <div class="row">
-          <div class="links">
-            <a href="${P.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="${P.github}" target="_blank" rel="noopener">GitHub</a>
-            <a href="${P.resume}" target="_blank" rel="noopener">${U.chrome.resume}</a>
-          </div>
-          <span>© 2026 ${esc(P.name)}</span>
+        <h2 class="connect-title">${U.chrome.connect}</h2>
+        <p class="connect-line">${U.chrome.footer}</p>
+        <a class="connect-mail" href="mailto:${P.email}">${esc(P.email)}</a>
+        <div class="socials">
+          <a href="${P.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${ICONS.linkedin}</a>
+          <a href="${P.github}" target="_blank" rel="noopener" aria-label="GitHub">${ICONS.github}</a>
+          <a href="${P.resume}" target="_blank" rel="noopener" aria-label="${U.chrome.resume}">${ICONS.resume}</a>
         </div>
+        <p class="copy">© 2026 ${esc(P.name)} · ${U.chrome.based}</p>
       </div>`;
   }
 
@@ -135,6 +135,9 @@
   const ICONS = {
     camera: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 16a3 3 0 0 1 3-3h6l3-5h12l3 5h6a3 3 0 0 1 3 3v21a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><circle cx="24" cy="25" r="8"/><circle cx="36.5" cy="19" r="1.2" fill="currentColor" stroke="none"/></svg>`,
     dive: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c0-3 2.5-5 6-5h20c3.5 0 6 2 6 5v5c0 3-2 5-5 5h-3.5a3 3 0 0 1-2.7-1.7l-.6-1.2a2.4 2.4 0 0 0-4.4 0l-.6 1.2a3 3 0 0 1-2.7 1.7H11c-3 0-5-2-5-5z"/><path d="M42 10v18a6 6 0 0 1-6 6h-2"/><circle cx="40" cy="6" r="1.4"/><path d="M4 42c3 0 3-2 6-2s3 2 6 2 3-2 6-2 3 2 6 2 3-2 6-2 3 2 6 2"/></svg>`,
+    linkedin: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm7 0h3.8v1.5h.05c.53-1 1.84-1.9 3.78-1.9 4.04 0 4.37 2.5 4.37 5.8v5.6h-4v-5c0-1.2-.02-2.8-1.7-2.8-1.7 0-1.97 1.33-1.97 2.7v5.1H10z"/></svg>`,
+    github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>`,
+    resume: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>`,
   };
 
   // ------------------------------------------------------------- mocks
@@ -301,16 +304,33 @@
 
       const A = U.about;
       const img = (ph) => `<img src="${ph.src}" alt="${esc(ph.alt || "")}" loading="lazy"/>`;
+      // A hobby with extra photos gets a swipeable slider instead of a single cover.
+      const cover = (h) => {
+        const all = [h.cover, ...h.photos].filter(Boolean);
+        if (all.length < 2) return all.length ? `<div class="hobby-cover">${img(all[0])}</div>` : "";
+        return `
+          <div class="hobby-cover slider">
+            <div class="slides">${all.map((ph) => `<figure>${img(ph)}</figure>`).join("")}</div>
+            <button class="slide-btn prev" aria-label="${A.prev}">‹</button>
+            <button class="slide-btn next" aria-label="${A.next}">›</button>
+            <div class="dots">${all.map((_, k) => `<i${k ? "" : ' class="on"'}></i>`).join("")}</div>
+          </div>`;
+      };
       $("#hobbies").innerHTML = S.hobbies.map((h) => `
         <div class="soft-card hobby reveal" style="--tint:var(--${h.tint})">
           <span class="hobby-icon" aria-hidden="true">${ICONS[h.icon]}</span>
           <h3>${esc(h.title)}</h3><p>${esc(h.body)}</p>
-          ${h.cover ? `<div class="hobby-cover">${img(h.cover)}</div>` : ""}
+          ${cover(h)}
         </div>`).join("");
-      const shots = S.hobbies.flatMap((h) => h.photos);
-      $("#shots").innerHTML = shots.length
-        ? `<div class="shots-lbl">${A.shots}</div><div class="shots">${shots.map((ph) => `<figure class="reveal">${img(ph)}</figure>`).join("")}</div>`
-        : "";
+      $$("#hobbies .slider").forEach((sl) => {
+        const track = $(".slides", sl);
+        const dots = $$(".dots i", sl);
+        const at = () => Math.round(track.scrollLeft / track.clientWidth);
+        const go = (i) => track.scrollTo({ left: ((i + dots.length) % dots.length) * track.clientWidth, behavior: "smooth" });
+        $(".prev", sl).onclick = () => go(at() - 1);
+        $(".next", sl).onclick = () => go(at() + 1);
+        track.addEventListener("scroll", () => dots.forEach((d, k) => d.classList.toggle("on", k === at())), { passive: true });
+      });
       $("#ai-views").innerHTML = S.aiViews.map((v) => `
         <div class="soft-card ai-card reveal" style="--tint:var(--${v.tint})">
           <div class="ai-who"><span class="swatch" style="background:${v.swatch}"></span>${esc(v.who)}</div>
