@@ -143,8 +143,8 @@ const en = {
           year: "2025",
           bullets: [
             "Sole owner of sourcing and quality acceptance for 530 finance books, from research-based volume planning and business-coverage selection to vendor coordination and delivery review",
-            "Built a multidimensional evaluation taxonomy with MCQ, short-answer, similarity and LLM-judge scoring",
-            "Automated dataset versioning, prompt/answer audits and reproducible scoring",
+            "Designed a 13-domain financial evaluation framework and implemented evaluation code with AI assistance",
+            "Reviewed question errors and compared pre/post-training and external models; model training was handled by a separate team",
           ],
         },
       ],
@@ -1047,8 +1047,8 @@ const ko = {
           heading: "LLM 학습 · 평가 데이터",
           bullets: [
             "금융 도서 530권의 수급·품질 관리 단독 담당: 연구 기반 목표량 산정, 4사 업무 기반 선정, 정제 기준 설계, 업체 협의 및 최종 검수",
-            "객관식, 단답형, 유사도, LLM-judge 채점을 포함한 다차원 평가 체계 설계",
-            "데이터셋 버전 관리, 프롬프트·정답 감사, 재현 가능한 채점 자동화",
+            "금융 업무 기반 13개 영역의 평가 체계를 설계하고 AI를 활용해 평가 코드 구현",
+            "문항 오류를 검수하고 학습 전후·외부 모델 성능 비교 수행. 모델 학습은 별도 팀 담당",
           ],
         },
       ],
