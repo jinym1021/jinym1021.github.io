@@ -148,10 +148,10 @@
     fabrix: () => `
       <div class="win">${bar("FabriX · capability benchmark")}
         <div class="win-body">
-          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>Capability</span><span>FabriX</span><span>GenOS</span><span>AWS</span></div>
+          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr"><span>Capability</span><span>FabriX 1.7</span><span>GenOS</span></div>
           ${["Agent builder", "Internal systems / MCP", "Model gateway", "Governance &amp; audit"].map((r) => `
-          <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w70")}${sk("w55")}${sk("w55")}</div>`).join("")}
-          <div class="m-row" style="grid-template-columns:auto auto 1fr;gap:8px"><span class="badge ok">1.7 tested</span><span class="badge hot">2.0 next</span><span></span></div>
+          <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w70")}${sk("w55")}</div>`).join("")}
+          <div class="m-row"><span class="badge ok">1.7 tested · GenOS compared</span></div>
         </div>
       </div>`,
     m365: () => `
@@ -177,9 +177,9 @@
         </div>
       </div>`,
     arch: () => `
-      <div class="win">${bar("RAG agent · 3 architectures")}
+      <div class="win">${bar("3 designs reviewed · 2 agents evaluated")}
         <div class="win-body m-grid" style="grid-template-columns:repeat(3,1fr)">
-          ${[["Databricks", ["Vector Search", "Agent", "GPT-4.1"]], ["Databricks + Foundry", ["Vector Search", "Foundry Agent", "GPT-4.1"]], ["Foundry", ["AI Search", "Foundry Agent", "GPT-4.1"]]].map(([h, ns]) => `
+          ${[["Databricks", ["Vector Search", "Agent", "Evaluated"]], ["Databricks + Foundry", ["A2A design review", "Authentication blocked", "Not connected"]], ["Foundry", ["AI Search", "Foundry Agent", "Evaluated"]]].map(([h, ns]) => `
           <div class="m-card"><b style="color:var(--ink)">${h}</b>${ns.map((n) => `<div class="node" style="font-size:12px">${n}</div>`).join('<div class="arrow" style="text-align:center">↓</div>')}</div>`).join("")}
         </div>
       </div>`,
@@ -197,28 +197,6 @@
           <div class="m-row m-head" style="grid-template-columns:1.6fr 1fr"><span>Change</span><span>Shows up in Copilot</span></div>
           ${[["Work IQ toggle", "Instant", "ok"], ["New OneNote page", "~2 min", "ok"], ["Profile → colleagues", "~1 day", ""], ["New SharePoint doc → colleagues", "Next day", ""], ["Permission revoked", "≤ 3 min", "ok"]].map(([k, v, c]) => `
           <div class="m-row" style="grid-template-columns:1.6fr 1fr"><span style="color:var(--ink)">${k}</span><span class="badge ${c}">${v}</span></div>`).join("")}
-        </div>
-      </div>`,
-    bench: () => `
-      <div class="win">${bar("effgen vs LangGraph · 5 models × 9 tasks")}
-        <div class="win-body" style="display:grid;gap:18px">
-          ${[["Tokens", 41815, 437427, "41.8K", "437K"], ["Successful runs", 28, 40, "28 / 45", "40 / 45"], ["Total time", 1486, 782, "1,486 s", "782 s"]].map(([k, a, b, la, lb]) => {
-            const m = Math.max(a, b);
-            return `<div><div style="font-weight:700;color:var(--ink);margin-bottom:8px">${k}</div>
-              <div class="hbar"><span>effgen</span><i style="width:${Math.max(3, (a / m) * 100)}%"></i><b>${la}</b></div>
-              <div class="hbar lg"><span>LangGraph</span><i style="width:${Math.max(3, (b / m) * 100)}%"></i><b>${lb}</b></div></div>`;
-          }).join("")}
-        </div>
-      </div>`,
-    portal: () => `
-      <div class="win">${bar("AI Center Portal")}
-        <div class="win-body">
-          <div class="m-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:14px">
-            ${["Projects", "Agents", "AI maturity"].map((t) => `<div class="m-card"><span>${t}</span>${sk("w40")}<span class="spark"></span></div>`).join("")}
-          </div>
-          <div class="m-row m-head" style="grid-template-columns:1.4fr .8fr 1.2fr"><span>Project</span><span>Status</span><span>Progress</span></div>
-          ${[[70, "ok", "Done"], [45, "hot", "In progress"], [20, "", "Planned"]].map(([w, c, t]) => `
-          <div class="m-row" style="grid-template-columns:1.4fr .8fr 1.2fr">${sk("w70")}<span class="badge ${c}">${t}</span><span class="prog"><i style="width:${w}%"></i></span></div>`).join("")}
         </div>
       </div>`,
     json: () => `

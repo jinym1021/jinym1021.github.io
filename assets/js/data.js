@@ -22,8 +22,8 @@ const en = {
   ledger: [
     { value: "44", unit: "skills", label: "curated from ~700 public agent skills for the group skill hub" },
     { value: "27/49", unit: "passed", label: "skills cleared automated security & quality validation" },
-    { value: "1,000+", unit: "records", label: "insurance disputes used to benchmark 3 RAG-agent architectures" },
-    { value: "530+", unit: "books", label: "finance books structured into LLM training & evaluation data" },
+    { value: "1,000+", unit: "records", label: "insurance source records supporting RAG-agent evaluation" },
+    { value: "530", unit: "books", label: "finance books sourced and quality-reviewed for LLM development" },
   ],
 
   focus: [
@@ -121,10 +121,10 @@ const en = {
           heading: "AI Platform PoC Lead",
           year: "2026 H2 – now",
           bullets: [
-            "Lead PoCs for the AI platforms usable on the group's Internal Business Network: M365 Copilot from pre-adoption PoC through post-adoption support (2026.07–09), and FabriX (Samsung SDS's in-house AI platform) across its 1.7 and 2.0 updates",
+            "Lead PoCs for the AI platforms usable on the group's Internal Business Network: M365 Copilot from pre-adoption PoC through post-adoption support (2026.06–09), and hands-on testing of FabriX 1.7 (Samsung SDS's in-house AI platform)",
             "Scoped M365 license tiers (E3/E5) and features before 4 affiliates confirmed adoption, including the security features regulators expect as audit evidence; tested Work IQ early and wrote setup guides",
-            "Set up a working council across 4 affiliates to share how each handles policy and find issues to tackle jointly; after adoption, interviewed owners and power users and escalated common issues to Microsoft",
-            "Tested FabriX 1.7 usability and new features (including MCP integration with Confluence) and projected 2.0 features from the vendor briefing; reported, then benchmarked it against affiliates' own AI platforms (GenOS, AWS) with capabilities scored",
+            "Conducted interviews for Samsung Securities and participated in Microsoft Q&A on roadmap and security; findings were shared with all four affiliates through a council operated by a colleague",
+            "Tested FabriX 1.7 hands-on and compared its capabilities with GenOS to assess use within the financial internal business network",
             "Co-produce A.TechFlow, the internal monthly AI technology newsletter, in a team of 3: planning, editing and writing (#10–#13, 2026.06–)",
           ],
         },
@@ -132,9 +132,9 @@ const en = {
           heading: "AI Agent Platform & Skill Hub",
           year: "2026 H1",
           bullets: [
-            "Built an enterprise skill hub for AI agents (catalog, recommender, audit pipeline); curated 44 skills from ~700 public skills via weighted scoring, AI review and human review",
-            "Automated skill validation (security, quality, auto-upgrade, platform tests): 27 of 49 skills passed; reported to the Center Head, shaping certified-skill governance and group-wide rollout",
-            "Benchmarked 3 RAG-agent architectures (Databricks, Databricks + MS Foundry, Foundry) on 1,000+ insurance dispute records for accuracy, latency and cost",
+            "Proposed and built an enterprise agent skill hub (catalog, validation pipeline and web UI; recommender by a collaborator); curated 44 skills from ~700 public skills through scoring, AI review and human review",
+            "Automated skill validation (security, quality, auto-upgrade, platform tests): 27 of 49 skills passed; provided the hub to the AI Innovation Team",
+            "Independently built Databricks and Foundry RAG agents, created an insurance golden dataset and evaluation code, and delivered a two-week PoC report covering measured performance and cross-platform integration risks",
             "Teach AI to every Samsung Securities new-hire cohort, ongoing since 2024 H2 (4 cohorts so far), and to administrative support staff (Dec 2025)",
           ],
         },
@@ -142,7 +142,7 @@ const en = {
           heading: "LLM Training & Evaluation Data",
           year: "2025",
           bullets: [
-            "Converted 530+ finance books into structured JSON with metadata, QA pairs and quality checks",
+            "Sole owner of sourcing and quality acceptance for 530 finance books, from research-based volume planning and business-coverage selection to vendor coordination and delivery review",
             "Built a multidimensional evaluation taxonomy with MCQ, short-answer, similarity and LLM-judge scoring",
             "Automated dataset versioning, prompt/answer audits and reproducible scoring",
           ],
@@ -233,107 +233,121 @@ const en = {
 
   projects: [
     {
-      id: "fabrix-poc",
-      tint: "rose",
-      visual: "fabrix",
-      no: "P-01",
-      title: "FabriX Platform PoC",
-      subtitle: "What the group's own AI platform can do on the Internal Business Network",
-      category: "work",
-      org: "Samsung Finance AI Center",
-      period: "2026.08 – Present",
-      ongoing: true,
-      role: "PoC lead — hands-on testing, feature analysis, benchmarking, reporting",
-      featured: true,
-      summary:
-        "Testing FabriX, the Samsung SDS AI platform the group runs on its Internal Business Network, through its 1.7 and 2.0 updates, and scoring it against the AI platforms affiliates run on their own (GenOS and AWS).",
-      problem:
-        "FabriX had been in use since 2024 and was moving through a 1.7 update toward 2.0. Affiliates also ran AI platforms of their own, and nobody had one picture of what FabriX could actually do inside a financial network or where it overlapped with what they already had.",
-      approach:
-        "Test 1.7 hands-on, project 2.0 from the vendor briefing, map every capability against the constraints of a regulated network, and score FabriX against GenOS and AWS.",
-      metrics: [
-        { value: "1.7", label: "tested hands-on" },
-        { value: "2.0", label: "features projected ahead of release" },
-        { value: "2", label: "affiliate platforms benchmarked (GenOS, AWS)" },
-      ],
-      stack: ["FabriX", "GenOS", "AWS", "MCP", "Confluence"],
-      links: [],
-      sections: [
-        {
-          heading: "FabriX 1.7 testing",
-          bullets: [
-            "Tested 1.7 usability and new features, including an MCP connection from the FabriX portal to Confluence",
-            "Flagged gaps specific to financial closed networks: package access for builds, external model access, and overlap with platforms affiliates already run",
-          ],
-        },
-        {
-          heading: "FabriX 2.0 analysis",
-          bullets: [
-            "Projected 2.0 capabilities from the vendor briefing: prompt / workflow / ADK agent builders, marketplace and agent directory, model gateway, user-permission pass-through and governance",
-            "Next: review the 2.0 upgrade hands-on once it ships",
-          ],
-        },
-        {
-          heading: "Output",
-          bullets: [
-            "Report on 1.7 testing and the expected 2.0 features",
-            "Benchmark of FabriX against the AI platforms affiliates run on their own (GenOS, AWS), with capabilities scored",
-          ],
-        },
-      ],
+  "id": "fabrix-poc",
+  "tint": "rose",
+  "visual": "fabrix",
+  "no": "P-01",
+  "title": "FabriX 1.7 PoC & GenOS Comparison",
+  "subtitle": "Assessing practical use within the financial internal business network",
+  "category": "work",
+  "org": "Samsung Finance AI Center",
+  "period": "2026.08 – Present",
+  "ongoing": true,
+  "role": "Hands-on FabriX 1.7 testing and GenOS comparison",
+  "featured": true,
+  "summary": "Tested FabriX 1.7 and compared it with GenOS to understand which capabilities were usable within the financial internal business network and how the platforms overlapped.",
+  "problem": "The group platform and affiliate platforms needed to be assessed against actual financial-network use, including capabilities and constraints.",
+  "approach": "Test FabriX 1.7 directly and compare its capabilities with GenOS, keeping observed behavior separate from other team members’ analysis of future releases.",
+  "metrics": [
+    {
+      "value": "1.7",
+      "label": "FabriX version tested"
     },
     {
-      id: "m365-adoption",
-      tint: "mint",
-      visual: "m365",
-      no: "P-02",
-      title: "M365 Copilot Adoption & Support",
-      subtitle: "From pre-adoption PoC to post-adoption support across four affiliates",
-      category: "work",
-      org: "Samsung Finance AI Center",
-      period: "2026.07 – 2026.09",
-      role: "PoC lead — license and feature scoping, testing, guides, council, adoption support",
-      featured: true,
-      summary:
-        "Scoped and tested M365 Copilot before four financial affiliates committed to it, then supported them after adoption through interviews and a joint working council.",
-      problem:
-        "Relaxed SaaS rules made M365 Copilot usable on financial firms' Internal Business Network, and four affiliates were weighing adoption without a clear view of licenses, features or how the others were handling policy.",
-      approach:
-        "Get ahead of the adoption decision: scope licenses and features, test them hands-on and write guides, then bring the four affiliates to one table to share policy and tackle common issues, before adoption and after.",
-      metrics: [
-        { value: "4", label: "affiliates in the joint working council" },
-        { value: "E3/E5", label: "license tiers mapped to audit needs" },
-        { value: "2", label: "phases: pre-adoption PoC, post-adoption support" },
-      ],
-      stack: ["M365 Copilot", "Work IQ", "Copilot Studio", "SharePoint", "Microsoft Purview"],
-      links: [],
-      sections: [
-        {
-          heading: "Pre-adoption PoC",
-          bullets: [
-            "Scoped license tiers and features before Life, Fire, Card and Securities confirmed adoption",
-            "Mapped E3 vs E5 security features (DLP, log retention) to what regulators expect as audit evidence",
-            "Tested Work IQ and other features early and turned the results into setup guides for employees",
-            "Set up a working council across the four affiliates to share how each handles policy and find issues to tackle jointly",
-          ],
-        },
-        {
-          heading: "Post-adoption support",
-          bullets: [
-            "Interviewed M365 owners at each affiliate on usage scope, open issues and support needs",
-            "Interviewed power users on which apps they use, how work changed and where Copilot still falls short",
-            "Used the council to share issues across affiliates and escalate common ones to Microsoft",
-          ],
-        },
-        {
-          heading: "Output",
-          bullets: [
-            "Work IQ onboarding guide for employees",
-            "A skill-sharing framework for M365 Copilot on SharePoint, carried over from the Skill Hub",
-          ],
-        },
-      ],
+      "value": "GenOS",
+      "label": "comparison platform"
+    }
+  ],
+  "stack": [
+    "FabriX",
+    "GenOS"
+  ],
+  "links": [],
+  "sections": [
+    {
+      "heading": "My role and team scope",
+      "bullets": [
+        "I conducted the hands-on FabriX 1.7 tests and the GenOS comparison. Other team members handled the 2.0 analysis and the remaining comparisons and reporting."
+      ]
     },
+    {
+      "heading": "Purpose of the comparison",
+      "bullets": [
+        "Assess what could be used within the financial internal business network and compare the available capabilities with GenOS.",
+        "Use observed functionality and constraints to clarify the platforms’ respective scope."
+      ]
+    }
+  ]
+},
+    {
+  "id": "m365-adoption",
+  "tint": "mint",
+  "visual": "m365",
+  "no": "P-02",
+  "title": "M365 Copilot PoC & Adoption Support",
+  "subtitle": "Feature testing, practical guides and securities-user research",
+  "category": "work",
+  "org": "Samsung Finance AI Center",
+  "period": "2026.06 – 2026.09",
+  "role": "Feature PoC, skill setup, Work IQ guides, Securities interviews and Microsoft Q&A",
+  "featured": true,
+  "summary": "Tested M365 Copilot from June through late September 2026, configured skill usage and wrote Work IQ guides. I conducted interviews for Samsung Securities; findings were shared across four affiliates through a colleague-operated council.",
+  "problem": "Adoption required understanding how features worked in the financial workplace, how document policies affected use, and what employees needed beyond the product feature list.",
+  "approach": "Combine hands-on tests with interviews, clarify roadmap and security questions with Microsoft, and turn findings into reusable guidance.",
+  "metrics": [
+    {
+      "value": "4",
+      "label": "months of continuous PoC"
+    },
+    {
+      "value": "4",
+      "label": "affiliates receiving shared findings"
+    }
+  ],
+  "stack": [
+    "M365 Copilot",
+    "SharePoint",
+    "OneNote",
+    "Notebooks",
+    "Work IQ"
+  ],
+  "links": [],
+  "sections": [
+    {
+      "heading": "My responsibility",
+      "bullets": [
+        "I owned the feature tests, skill-usage setup and Work IQ analysis and guides described here. I was responsible for the Securities interviews; a colleague operated the cross-affiliate council."
+      ]
+    },
+    {
+      "heading": "Feature testing and skill usage",
+      "bullets": [
+        "Tested M365 features throughout June–September, including OneNote and Notebooks in August.",
+        "I adapted an existing skill-creator for internal use, adding output-based naming prefixes, category-based SharePoint storage rules and a shared DESIGN.md reference requirement for Word and PowerPoint skills, then stored it in SharePoint. Users could mention the document with @ or attach it in Copilot chat to create a task-specific skill.",
+        "Users downloaded the generated skill, uploaded it to SharePoint and reused it by mentioning or attaching the document in later chats. I established this creation, storage and reuse workflow within the existing M365 environment."
+      ]
+    },
+    {
+      "heading": "Work IQ deep dive",
+      "bullets": [
+        "Investigated Work IQ and wrote concept, onboarding and reference guides to explain setup and how work information became available to Copilot."
+      ]
+    },
+    {
+      "heading": "Interviews and Microsoft Q&A",
+      "bullets": [
+        "From late July, interviewed Securities practitioners about adoption, document import/export policies, functionality and performance, organization and operations, and multi-platform AI strategy.",
+        "Interviewed users about their work, use cases, practical tips and improvement requests; participated in Microsoft Q&A on technical roadmap and security."
+      ]
+    },
+    {
+      "heading": "Outputs and sharing",
+      "bullets": [
+        "Produced test findings, skill-usage materials, Work IQ guides and interview findings. These were shared with all four affiliates through the working council."
+      ]
+    }
+  ]
+},
     {
       id: "workiq-guide",
       no: "P-03",
@@ -345,7 +359,7 @@ const en = {
         { src: "assets/img/workiq-setup-guide.jpg", caption: "Setup guide — four steps, twelve items, a progress checklist" },
         { src: "assets/img/workiq-setup-step.jpg", caption: "Each item: lead time, how to do it, and how to check it worked" },
         { src: "assets/img/workiq-architecture.jpg", caption: "Concept guide — Work IQ in five layers, Data · Memory · Inference at the core" },
-        { src: "assets/img/workiq-lead-times.jpg", caption: "Reference — measured lead times for 14 kinds of change" },
+        { src: "assets/img/workiq-lead-times.jpg", caption: "Reference — lead-time guidance for 14 kinds of change" },
         { src: "assets/img/workiq-poc-results.jpg", caption: "Reference — PoC test results and what they mean for the guide" },
       ],
       title: "Work IQ Onboarding Guide",
@@ -357,17 +371,18 @@ const en = {
       summary:
         "A three-part guide (concept, setup, reference) that explains Microsoft Work IQ and what employees need to set up so Copilot answers from their own work data, backed by measured lead times.",
       problem:
-        "The most common Copilot question was “I saved it, so why can’t it find it?” Nobody knew how long profile, OneDrive or SharePoint changes took to reach Copilot, or which file habits helped.",
+        "Users asked why Copilot could not find saved documents, and I encountered the same issue in my own use. I investigated settings, retrieval behavior and update timing to turn these issues into practical guidance.",
       approach:
         "I measured it. A PoC on Samsung Life’s M365 tenant timed how quickly each change showed up in Copilot Chat, and the results became a checklist-style setup guide and a set of team file rules.",
       metrics: [
-        { value: "14", label: "lead times measured" },
+        { value: "14", label: "change types covered in the timing guide" },
         { value: "12", label: "file management rules" },
         { value: "~30 min", label: "first-time setup, no admin rights" },
       ],
       stack: ["M365 Copilot", "Work IQ", "SharePoint", "OneDrive", "HTML"],
       links: [],
       sections: [
+        {"heading": "Observed problems and practical guidance", "bullets": ["Tests were conducted on the Samsung Life tenant in Copilot Chat web from August 27 to September 4, 2026. Findings describe that environment and period.", "In a test case I constructed, answers mixed document revisions when effective-date metadata was absent. Adding date fields produced consistent selection of the intended revision in the test, informing guidance to manage version and validity dates as library columns.", "A document missing from general search could still be read when its link was specified. I recommended explicitly referencing urgent documents and rechecking update visibility in a fresh session the following day."]},
         {
           heading: "Concept",
           bullets: [
@@ -405,18 +420,18 @@ const en = {
       ],
       no: "P-04",
       title: "Agent Skill Hub",
-      subtitle: "A validated skill marketplace for the group's AI agents",
+      subtitle: "Skill selection, validation and sharing for the AI Innovation Team",
       category: "work",
       org: "Samsung Finance AI Center",
       period: "2026.04 – 2026.07",
-      role: "Owner — catalog, validation MCP server, web UI, recommender, CI",
+      role: "Initiator and builder — selection criteria, catalog, validation MCP server, web UI and CI; recommender built by a collaborator",
       featured: true,
       summary:
         "A curated skill catalog plus the service that guards it: upload a SKILL.md, get a three-stage validation, auto-upgrade what fails, and open a merge request — then install skills straight from Claude Code.",
       problem:
-        "Public agent skills passed 10,000 with no shared bar for quality, security or fit to financial work. Every team was either re-reviewing the same skills or installing them unreviewed.",
+        "I was concerned that adopting public skills without shared checks could introduce quality and security risks. I proposed a hub to assess their instructions, dependencies and fit to the organization before sharing them.",
       approach:
-        "Curate a small, relevant set; make validation a tool anyone can call; and publish only what passes, through the same Git review flow engineers already use.",
+        "Define selection criteria, separate security and quality checks from platform execution tests, and connect review, improvement and submission through a reusable validation service.",
       metrics: [
         { value: "44", label: "curated from ~700 public skills" },
         { value: "27 / 49", label: "passed automated validation" },
@@ -439,7 +454,7 @@ const en = {
           heading: "Publishing",
           bullets: [
             "submit_skill re-validates, then opens a GitLab merge request as the submitting user; non-PASS skills can be forced through with a [FORCE] tag and the reason attached",
-            "Every call is written to a JSONL audit log with the verdict, stage timings and content hash",
+            "Every call is written to a JSONL audit log with the verdict, stage timings and content hash. REVIEW highlights items that would benefit from optional human checking; it is not itself a mandatory approval requirement",
           ],
         },
         {
@@ -447,14 +462,14 @@ const en = {
           bullets: [
             "Curation: 8-axis weighted scoring (job relevance, required-skill match, finance domain, completeness, security, source credibility, generality, dedup), AI review, then human review",
             "Each skill is exposed as a Claude Code plugin; marketplace.json is generated from SKILL.md frontmatter and kept in sync by CI after merge",
-            "Recommender: a 4–8 turn chat about the user's role, keyword search to the top 30, then an LLM picks 10–15 skills to install",
+            "Recommender (implemented by a collaborator): a 4–8 turn chat about the user's role, keyword search to the top 30, then an LLM picks 10–15 skills to install",
           ],
         },
         {
           heading: "Outcome",
           bullets: [
-            "Reported to the Center Head, setting the direction for certified-skill governance and a security-review agreement across affiliates",
-            "Extended into a skill-sharing framework for M365 Copilot on SharePoint",
+            "Provided the skill hub to the AI Innovation Team. User feedback has not yet been collected, so productivity improvements have not been measured",
+            "Created a reusable process for selecting, validating, improving and sharing skills within the team",
           ],
         },
       ],
@@ -468,119 +483,61 @@ const en = {
       subtitle: "Databricks vs. Microsoft Foundry for RAG agents",
       category: "work",
       org: "Samsung Finance AI Center",
-      period: "2026.02 – 2026.03",
-      role: "Built all three variants and the comparison framework",
+      period: "2026.03 · final two weeks · final report Mar 30",
+      role: "Sole owner — two RAG agents, golden dataset, evaluation code, integration-risk analysis and final report",
       featured: true,
       summary:
-        "The same RAG agent built three ways over insurance dispute data, to inform where the group's agents should live relative to its data platform.",
+        "With AWS Databricks already selected as the data platform, I evaluated two RAG implementations and analyzed a third integration design over the final two weeks of March 2026 and delivered the final report on March 30. The PoC confirmed that Azure Foundry could connect to the data, while identifying substantial cost and operational overhead.",
       problem:
-        "Should agents run next to the data (Databricks), on the model platform (Foundry), or split across both? Each option had advocates and no shared numbers.",
+        "The data-platform decision was already made. The open question was whether Foundry should call agents hosted on Databricks or use data shared into Azure, and how those options compared with a Databricks-only environment.",
       approach:
-        "I fixed the model, embeddings, reranker and search strategy, then built the agent three times and defined how to compare them on quality, operations and cost.",
+        "I built Databricks-only and Foundry-only RAG agents and evaluated both against a shared golden dataset. The cross-platform agent-call case remained a risk analysis because authentication prevented a live connection.",
       metrics: [
-        { value: "3", label: "architectures compared" },
-        { value: "1,047", label: "case-law & dispute records" },
+        { value: "3", label: "architecture options reviewed" },
+        { value: "2", label: "RAG agents evaluated on a shared golden dataset" },
         { value: "1 vs 2", label: "days to build (Databricks vs Foundry)" },
       ],
       stack: ["Databricks", "Mosaic AI Agent Framework", "Azure AI Foundry", "Azure AI Search", "GPT-4.1", "text-embedding-3-large"],
       links: [],
       sections: [
         {
-          heading: "Setup",
+          heading: "Three architectures and evaluation data",
           bullets: [
-            "Data: 360 insurance case-law records and 687 FSS dispute cases, plus a golden Q&A set",
-            "Fixed conditions across architectures: GPT-4.1, text-embedding-3-large, reranker, BM25 + vector hybrid search",
+            "Databricks-only: run the agent within Databricks",
+            "Databricks + Foundry: proposed A2A calls from Azure to Genie and Mosaic agents; authentication blocked a live connection, so this case was limited to integration-risk analysis",
+            "Foundry-only: bring data from Databricks into Azure through data sharing and run the agent in Foundry",
+            "Evaluation: a golden dataset built from Korea Life Insurance Association data and a case-law collection",
+            "Golden-dataset performance evaluation covered Databricks-only and Foundry-only; the agent-to-agent integration was not evaluated end to end",
           ],
         },
         {
           heading: "Evaluation criteria",
           bullets: [
-            "Retrieval quality, answer accuracy and hallucination rate",
-            "Latency, including cross-platform overhead, and egress cost",
+            "Measured RAG retrieval and answer performance in the two standalone agent environments",
+            "Analyzed cross-platform latency and egress-cost risks; did not measure an end-to-end Case 2 connection",
             "Tracing, evaluation and cost monitoring, and user-level access control",
           ],
         },
         {
+  "heading": "Measured results and interpretation",
+  "bullets": [
+    "The supplied comparison report records retrieval precision of 48.0% vs 47.1%, recall of 76.2% vs 61.1%, and Full Match of 84/120 (70.0%) vs 67/120 (55.8%), for Databricks-only and Foundry-only respectively.",
+    "Answer F1 was close: 0.1947 vs 0.1929. Higher retrieval coverage therefore did not translate into a similarly large difference in this answer metric.",
+    "Mean response times were 17.81s vs 7.93s. The Databricks measurement included external model-call latency, so this is a comparison of the tested configurations rather than an isolated platform-speed benchmark.",
+    "I also compared initial setup, customization, tracing, evaluation and cost monitoring, and access management. These observations reflect the March 2026 test environment and available permissions."
+  ]
+},
+        {
           heading: "Findings",
           bullets: [
             "Databricks-only setup took 1 day (4 including permissions); Foundry-only took 2 days (7 including permissions and resources)",
-            "Delta Sharing was not recommended due to instability, so cross-platform data movement needed a different path",
-          ],
-        },
-      ],
-    },
-    {
-      id: "agent-framework-benchmark",
-      no: "P-06",
-      tint: "peach",
-      visual: "bench",
-      title: "Agent Framework Benchmark",
-      subtitle: "effgen vs. LangGraph for financial-analysis agents",
-      category: "work",
-      org: "Samsung Finance AI Center",
-      period: "2026.03",
-      role: "Designed the benchmark, built both agents, wrote the report",
-      summary:
-        "The same financial-analysis agent built on effgen and on LangGraph, run across 5 models and 9 tasks to see what each framework trades off.",
-      problem:
-        "Newer agent frameworks promise lower token costs than LangGraph, but the claims came from different prompts, tools and models, so nothing was comparable.",
-      approach:
-        "Only the framework changed. System prompt, tools (calculator, Python REPL, web search), API backend and 9 finance tasks, from simple calculations to company comparisons and injected failures, were shared.",
-      metrics: [
-        { value: "10.5×", label: "fewer tokens with effgen" },
-        { value: "40 vs 28", label: "successful runs of 45 (LangGraph vs effgen)" },
-        { value: "1.9×", label: "slower with effgen" },
-      ],
-      stack: ["Python", "effgen", "LangGraph", "OpenRouter"],
-      links: [],
-      sections: [
-        {
-          heading: "Setup",
-          bullets: [
-            "5 models: Gemini 3.1 Flash-Lite, Qwen3.5 9B and 122B, gpt-oss 20B and 120B",
-            "9 tasks across simple, moderate, complex and error-recovery tiers",
-            "Measured tokens, latency, tool calls and success rate per task",
-          ],
-        },
-        {
-          heading: "Findings",
-          bullets: [
-            "effgen kept complex tasks cheap; LangGraph’s ReAct loop averaged 261K tokens on the company-comparison task",
-            "Most effgen failures were gpt-oss runs hitting max iterations: a prompt-format mismatch, not a framework limit",
-            "Recommendation: effgen when token cost dominates, LangGraph when stable operation matters",
-          ],
-        },
-      ],
-    },
-    {
-      id: "ai-center-portal",
-      no: "P-07",
-      tint: "sage",
-      visual: "portal",
-      title: "AI Center Portal Prototype",
-      subtitle: "One front door for the center’s projects, agents and models",
-      category: "work",
-      org: "Samsung Finance AI Center",
-      period: "2026.01 – 2026.04",
-      role: "Designed in Figma and built the prototype",
-      summary:
-        "A clickable portal prototype that puts the AI Center’s projects, agents, model benchmarks and shared assets in one place.",
-      problem:
-        "Information about the center’s AI projects, agents, models and reusable assets was spread across separate channels, so it was hard to see what already existed.",
-      approach:
-        "I laid out the information architecture in Figma, then built a working React prototype with sample data to test the flows end to end.",
-      metrics: [],
-      stack: ["Figma", "React", "Vite", "Recharts", "Radix UI"],
-      links: [],
-      sections: [
-        {
-          heading: "Screens",
-          bullets: [
-            "Monitoring dashboard: projects by team with AI maturity level, status and progress",
-            "Agent dashboard with per-agent and per-task detail pages",
-            "Model leaderboard with benchmark metric explanations and a model request form",
-            "Marketplace for data, apps, Python libraries, agents and MCP servers, with an admin view",
-            "News, wiki, feedback and an AI playground",
+            "Connecting Azure Foundry agents to data held in AWS Databricks was technically feasible, but introduced substantial cost and operational inefficiency",
+            "Cost: the configuration using Azure AI Search required embedding-vector storage in both platforms, cross-cloud egress and dedicated connectivity.",
+            "Operations: chunking, embeddings and data catalogs required management in both environments, plus a pipeline to resynchronize the Azure AI Search index when AWS source data changed.",
+            "Embedding lifecycle: document and query embeddings had to use compatible vector spaces. Model changes required planning for vector and index updates.",
+            "Identity and latency: I reviewed the split between Entra ID and AWS IAM and the additional latency of cross-platform calls.",
+            "Incident response and auditability: diagnosis spanned Azure, AWS and Databricks, with manual correlation of logs from the two clouds.",
+            "The March 30 final report distinguished technical feasibility from the cost and operational implications of adoption",
           ],
         },
       ],
@@ -749,47 +706,92 @@ const en = {
       ],
     },
     {
-      id: "llm-training-evaluation",
-      tint: "peach",
-      visual: "json",
-      no: "P-10",
-      title: "LLM Training & Evaluation Data",
-      subtitle: "Finance-domain data and an evaluation framework",
-      category: "work",
-      org: "Samsung Finance AI Center",
-      period: "2025.01 – 2025.12",
-      role: "Data pipeline, evaluation taxonomy, scoring automation",
-      summary:
-        "Training and evaluation data for a finance LLM built from 530+ domain books, with evaluation that goes beyond a single 'finance' label.",
-      problem:
-        "A single 'finance' benchmark score couldn't tell the four affiliates whether a model was good at insurance underwriting, tax, or compliance.",
-      approach:
-        "Structure the source books into training data, then redesign evaluation so results read by domain and by skill.",
-      metrics: [
-        { value: "530+", label: "finance books structured" },
-        { value: "4", label: "affiliates' domains mapped" },
-      ],
-      stack: ["Python", "Data curation", "QA generation", "LLM-as-judge"],
-      links: [],
-      sections: [
-        {
-          heading: "Training data",
-          bullets: [
-            "Converted 530+ finance books into structured JSON with metadata and QA pairs, with deduplication and quality checks",
-            "Mapped domain coverage across Samsung Life, Fire, Card and Securities to prioritize gaps",
-          ],
-        },
-        {
-          heading: "Evaluation framework",
-          bullets: [
-            "Fundamentals: economics, accounting, taxation, labor law, statistics",
-            "Practices: compliance, risk management, asset management, insurance, digital finance",
-            "Methods: multi-answer MCQ, short-answer, similarity-based grading, LLM-assisted win-rate",
-            "Automated dataset versioning, prompt/answer audits and scoring reproducibility",
-          ],
-        },
-      ],
+  "id": "llm-training-evaluation",
+  "tint": "peach",
+  "visual": "json",
+  "no": "P-10",
+  "title": "Financial LLM Data & Evaluation",
+  "subtitle": "From business coverage to data quality and model validation",
+  "category": "work",
+  "org": "Samsung Finance AI Center",
+  "period": "2025.01 – 2025.12",
+  "role": "Sole owner of data sourcing and acceptance; evaluation design, implementation and execution",
+  "summary": "Owned the sourcing and quality process for 530 finance books and built a financial-knowledge evaluation framework grounded in the work of four affiliates.",
+  "problem": "Corpus size alone did not establish business coverage, and broad finance benchmark scores did not explain knowledge across the affiliates’ work.",
+  "approach": "Map financial work to source selection, define cleansing and acceptance criteria, and implement model evaluation against that business context.",
+  "metrics": [
+    {
+      "value": "530",
+      "label": "books in the final delivery"
     },
+    {
+      "value": "4",
+      "label": "affiliates mapped"
+    },
+    {
+      "value": "13",
+      "label": "evaluation areas"
+    }
+  ],
+  "stack": [
+    "Python",
+    "Data curation",
+    "Quality assurance",
+    "LLM evaluation"
+  ],
+  "links": [],
+  "sections": [
+    {
+      "heading": "Project context",
+      "bullets": [
+        "A finance-specific model needed more than a large corpus. Its data had to cover the work of life insurance, general insurance, card and securities businesses while preserving meaning during processing. Evaluation also needed to reflect the knowledge required in those businesses."
+      ]
+    },
+    {
+      "heading": "My role and collaboration",
+      "bullets": [
+        "I was the sole owner of data-volume planning, book selection, quality and cleansing specifications, vendor coordination, delivery review, correction requests and final acceptance. The final delivery covered 530 finance books.",
+        "I also owned evaluation redesign, implemented the evaluation code with AI assistance and ran model assessments. An external vendor processed the books; a separate team trained the models."
+      ]
+    },
+    {
+      "heading": "01 · Turning research into a sourcing plan",
+      "bullets": [
+        "I reviewed domain-specific model research and implementation cases to estimate training-data requirements. I distinguished the estimated requirement from what could realistically be sourced and defined a quality-first sourcing target and selection criteria."
+      ]
+    },
+    {
+      "heading": "02 · Selecting books against financial workflows",
+      "bullets": [
+        "I analyzed organizational structures and responsibilities across four affiliates, mapping shared and sector-specific work to book selection: compliance, asset management, risk, insurance contracts and claims handling.",
+        "I screened publication dates, authors and titles, then reviewed contents and previews. I revisited the distribution across sectors and sourced additional books to address gaps in business coverage."
+      ]
+    },
+    {
+      "heading": "03 · Preserving meaning through data quality controls",
+      "bullets": [
+        "I defined separate criteria for source selection and delivered-data cleansing, including treatment of tables, formulas, images and text, and links between questions, answer choices, answers and explanations.",
+        "During review, I found tables that could be structured being treated as images, missing captions, and text from summary cards inserted in ways that disrupted the surrounding text. These cases could lose table relationships or separate explanations from the content they described.",
+        "I revised the processing criteria for images, tables, captions and formulas with the vendor, prioritizing their relationship to the main text and preserving reading order wherever possible. Tables with identifiable rows and columns were structured in LaTeX with titles, notes and sources retained as metadata; complex layouts could be split or preserved as images under explicit exception rules. The agreed criteria were applied to subsequent deliveries. As new edge cases emerged, I coordinated case-specific corrections and standardized their handling, progressively refining the shared criteria. I rechecked corrected deliveries before final acceptance."
+      ]
+    },
+    {
+      "heading": "04 · Designing and implementing financial evaluation",
+      "bullets": [
+        "I reorganized evaluation into two groups and 13 areas: economics, management, accounting, taxation, labor, statistics, compliance, sales, digital finance, asset management, risk, insurance contracts and claims handling.",
+        "I planned multiple-choice and written-response methods to test understanding beyond answer accuracy, incorporating checks for training/evaluation overlap and grading reliability. I identified and addressed question errors during dataset preparation, then reviewed the data before evaluation to limit their effect on model scores.",
+        "Using AI assistance, I implemented evaluation code and compared models before and after training as well as against external models. My responsibility spanned evaluation design, execution and result compilation."
+      ]
+    },
+    {
+      "heading": "Deliverables and contribution",
+      "bullets": [
+        "The work produced a final delivery covering 530 books, business-coverage selection criteria, cleansing and acceptance specifications, a financial-knowledge evaluation framework and evaluation code.",
+        "I connected analysis of financial work to both data selection and model validation, making explicit which knowledge the corpus should contain and what the evaluation should test."
+      ]
+    }
+  ]
+},
     {
       id: "llm-qa-service",
       tint: "sky",
@@ -890,7 +892,7 @@ en.ui = {
     photoAlt: "Portrait of Jin Y. Moon",
     workTitle: "Selected work",
     readCase: "Read case study",
-    allProjects: "See all 12 projects",
+    allProjects: "See all projects",
     alsoTitle: "Writing, teaching & community",
     alsoLede: "Things I do besides building.",
     now: "Now", nowV: "AI Engineer &amp; PoC lead, Samsung Finance AI Center",
@@ -960,8 +962,8 @@ const ko = {
   ledger: [
     { unit: "개", label: "공개 에이전트 스킬 약 700개 중 그룹 스킬 허브용으로 선별" },
     { unit: "통과", label: "보안·품질 자동 검증을 통과한 스킬" },
-    { unit: "건", label: "RAG 에이전트 아키텍처 3종 벤치마크에 쓴 보험 분쟁 데이터" },
-    { unit: "권", label: "LLM 학습·평가 데이터로 구조화한 금융 도서" },
+    { unit: "건", label: "RAG 에이전트 평가에 활용한 보험 원천 데이터" },
+    { unit: "권", label: "수급·품질 관리와 최종 검수를 담당한 금융 도서" },
   ],
 
   focus: [
@@ -1024,10 +1026,10 @@ const ko = {
           heading: "AI 플랫폼 PoC 담당",
           year: "2026 하반기 – 현재",
           bullets: [
-            "금융 3호망(내부 업무망)에서 쓸 수 있는 그룹 AI 플랫폼 PoC 담당: M365 Copilot 도입 전 PoC부터 도입 후 지원까지(2026년 7~9월), 삼성SDS 사내 AI 플랫폼 FabriX의 1.7·2.0 업데이트 분석",
+            "금융 3호망(내부 업무망)에서 쓸 수 있는 그룹 AI 플랫폼 PoC 담당: M365 Copilot 도입 전 PoC부터 도입 후 지원까지(2026년 6~9월), 삼성SDS 사내 AI 플랫폼 FabriX 1.7 직접 테스트",
             "4개 관계사 M365 도입 확정 전 라이선스(E3/E5)와 기능 범위 파악(금융 감독 증적에 필요한 보안 기능 포함), Work IQ 등 기능 선제 테스트 및 가이드 제작",
-            "4개 관계사 실무 협의체를 마련해 정책 대응 방식을 공유하고 공동 대응할 이슈 발굴, 도입 후에는 담당자·파워유저 인터뷰와 Microsoft 이슈 에스컬레이션",
-            "FabriX 1.7 사용성·신규 기능 테스트(Confluence MCP 연결 포함), 설명회 내용 기반으로 2.0 기능 분석·예상 정리 후 보고, 관계사 자체 AI 플랫폼(GenOS, AWS)과 비교해 기능성 수치화",
+            "증권 담당 실무자·사용자 인터뷰와 기술 로드맵·보안 관련 MS 질의응답 수행. 결과는 다른 담당자가 운영하는 협의체를 통해 4사에 공유",
+            "FabriX 1.7 직접 테스트와 GenOS 기능 비교를 담당해 금융사 내부 업무망에서의 활용 범위 검토",
             "사내 월간 AI 기술 뉴스레터 A.TechFlow 3인 공동 제작: 기획·편집·집필(10~13호, 2026년 6월~)",
           ],
         },
@@ -1035,16 +1037,16 @@ const ko = {
           heading: "AI 에이전트 플랫폼 · 스킬 허브",
           year: "2026 상반기",
           bullets: [
-            "AI 에이전트용 사내 스킬 허브 구축(카탈로그, 추천, 감사 파이프라인). 공개 스킬 약 700개를 가중치 점수, AI 리뷰, 사람 리뷰로 걸러 44개 선별",
-            "스킬 검증 자동화(보안, 품질, 자동 개선, 플랫폼 테스트): 49개 중 27개 통과. 센터장 보고를 거쳐 인증 스킬 거버넌스와 그룹 전사 확산 방향 수립",
-            "RAG 에이전트 아키텍처 3종(Databricks, Databricks + MS Foundry, Foundry)을 보험 분쟁 데이터 1,000건 이상으로 정확도·지연·비용 비교",
+            "공개 스킬의 품질·보안 위험에 대응하기 위해 사내 스킬 허브를 제안하고 카탈로그·검증 파이프라인·웹 UI 구현(추천기는 협업). 약 700개를 점수화·AI 리뷰·사람 검토로 걸러 44개 선별",
+            "스킬 검증 자동화(보안, 품질, 자동 개선, 플랫폼 테스트): 49개 중 27개 통과. 구축한 스킬 허브를 AI혁신팀에 제공",
+            "2주간 Databricks·Foundry RAG 에이전트 구현, 보험 golden dataset 제작, 평가 코드와 최종 보고를 단독 수행. 실측 성능과 플랫폼 간 연계 리스크 분석",
             "삼성증권 신입사원 AI 강의를 2024년 하반기부터 매 기수 이어서 진행(현재까지 4개 기수), 사무지원직 AI 교육(2025년 12월)",
           ],
         },
         {
           heading: "LLM 학습 · 평가 데이터",
           bullets: [
-            "금융 도서 530권 이상을 메타데이터, QA 쌍, 품질 검사를 갖춘 구조화 JSON으로 변환",
+            "금융 도서 530권의 수급·품질 관리 단독 담당: 연구 기반 목표량 산정, 4사 업무 기반 선정, 정제 기준 설계, 업체 협의 및 최종 검수",
             "객관식, 단답형, 유사도, LLM-judge 채점을 포함한 다차원 평가 체계 설계",
             "데이터셋 버전 관리, 프롬프트·정답 감사, 재현 가능한 채점 자동화",
           ],
@@ -1111,76 +1113,95 @@ const ko = {
 
   projects: [
     {
-      title: "FabriX 플랫폼 PoC",
-      subtitle: "그룹 자체 AI 플랫폼이 내부 업무망에서 할 수 있는 일",
-      period: "2026.08 – 현재",
-      org: "삼성금융 AI센터",
-      role: "PoC 담당 — 기능 테스트, 기능 분석, 비교 평가, 보고",
-      summary: "그룹이 3호망(내부 업무망)에서 쓰는 삼성SDS AI 플랫폼 FabriX를 1.7과 2.0 업데이트에 맞춰 테스트하고, 관계사 자체 AI 플랫폼(GenOS, AWS)과 비교해 기능성을 수치화했습니다.",
-      problem: "FabriX는 2024년부터 쓰고 있었고 1.7을 거쳐 2.0 업데이트를 앞두고 있었습니다. 관계사마다 자체 AI 플랫폼도 따로 운영하고 있어서, 금융망 안에서 FabriX가 실제로 무엇을 할 수 있는지, 기존 플랫폼과 어디서 겹치는지 한눈에 보여주는 자료가 없었습니다.",
-      approach: "1.7을 직접 써 보고, 설명회 내용으로 2.0을 예상 분석하고, 모든 기능을 규제망 제약에 대입한 뒤 관계사 플랫폼인 GenOS, AWS와 점수로 비교했습니다.",
-      metrics: [{ label: "직접 테스트" }, { label: "출시 전 기능 예상 분석" }, { label: "관계사 플랫폼과 비교(GenOS, AWS)" }],
-      sections: [
-        {
-          heading: "FabriX 1.7 테스트",
-          bullets: [
-            "1.7 사용성·신규 기능 테스트(포털–Confluence MCP 연결 포함)",
-            "금융 폐쇄망 특유의 공백 정리: 빌드용 패키지 확보, 외부 모델 사용, 관계사가 이미 운영 중인 플랫폼과의 중복",
-          ],
-        },
-        {
-          heading: "FabriX 2.0 분석",
-          bullets: [
-            "설명회 내용을 바탕으로 2.0 기능 분석·예상: 프롬프트·워크플로우·ADK 에이전트 빌더, 마켓플레이스와 에이전트 디렉터리, 모델 게이트웨이, 사용자 권한 상속, 거버넌스",
-            "다음 단계: 2.0 업그레이드 후 직접 검토",
-          ],
-        },
-        {
-          heading: "산출물",
-          bullets: [
-            "1.7 테스트와 2.0 예상 기능 보고",
-            "관계사 자체 AI 플랫폼(GenOS, AWS)과 FabriX를 비교한 기능성 수치화",
-          ],
-        },
-      ],
+  "title": "FabriX 1.7 PoC와 GenOS 비교",
+  "subtitle": "금융사 내부 업무망에서의 실제 활용 범위 검토",
+  "period": "2026.08 – 현재",
+  "org": "삼성금융 AI센터",
+  "role": "FabriX 1.7 직접 테스트, GenOS 기능 비교",
+  "summary": "FabriX 1.7을 직접 테스트하고 GenOS와 비교해, 금융사 내부 업무망에서 사용할 수 있는 기능과 기존 플랫폼 대비 활용 범위를 검토했습니다.",
+  "problem": "그룹 공통 플랫폼과 관계사 플랫폼을 실제 금융 업무망의 사용 조건에 맞춰 비교하고, 제공 기능과 제약을 확인해야 했습니다.",
+  "approach": "FabriX 1.7에서 실제 동작을 확인하고 GenOS와 기능을 비교했습니다. 직접 테스트한 범위와 다른 팀원이 수행한 차기 버전 분석을 구분했습니다.",
+  "metrics": [
+    {
+      "value": "1.7",
+      "label": "직접 테스트한 FabriX 버전"
     },
     {
-      title: "M365 Copilot 도입 및 지원",
-      subtitle: "4개 관계사, 도입 전 PoC부터 도입 후 지원까지",
-      period: "2026.07 – 2026.09",
-      org: "삼성금융 AI센터",
-      role: "PoC 담당 — 라이선스·기능 범위 파악, 기능 테스트, 가이드, 협의체, 도입 후 지원",
-      summary: "4개 금융 관계사가 도입을 확정하기 전에 M365 Copilot을 먼저 파악·테스트하고, 도입 후에는 인터뷰와 공동 실무 협의체로 관계사를 지원했습니다.",
-      problem: "SaaS 규제 완화로 M365 Copilot을 금융사 3호망(내부 업무망)에서 쓸 수 있게 됐지만, 4개 관계사는 라이선스와 기능 범위, 서로의 정책 대응 방식을 모른 채 도입을 검토하고 있었습니다.",
-      approach: "도입 결정보다 한발 앞서 라이선스와 기능 범위를 파악하고 직접 테스트해 가이드로 만들었습니다. 그리고 4개 관계사를 한자리에 모아 도입 전후로 정책과 공통 이슈를 공유했습니다.",
-      metrics: [{ label: "관계사 공동 실무 협의체" }, { label: "라이선스를 감독 증적 기준으로 매핑" }, { label: "단계: 도입 전 PoC, 도입 후 지원" }],
-      sections: [
-        {
-          heading: "도입 전 PoC",
-          bullets: [
-            "생명·화재·카드·증권 도입 확정 전 라이선스와 기능 범위 파악",
-            "E3와 E5 보안 기능(DLP, 로그 보존)을 금융 감독 증적 요구사항과 대조",
-            "Work IQ 등 기능을 선제 테스트하고 결과를 임직원용 세팅 가이드로 제작",
-            "4개 관계사 실무 협의체 마련: 관계사별 정책 대응 방식 공유, 공동 대응할 이슈 발굴",
-          ],
-        },
-        {
-          heading: "도입 후 지원",
-          bullets: [
-            "관계사별 M365 담당자 인터뷰: 사용 범위, 미해결 이슈, 지원 요청사항",
-            "파워유저 인터뷰: 주로 쓰는 앱, 업무 방식 변화, Copilot이 아직 못 채우는 부분",
-            "협의체로 관계사 간 이슈를 공유하고 공통 이슈는 Microsoft에 에스컬레이션",
-          ],
-        },
-        {
-          heading: "산출물",
-          bullets: [
-            "임직원용 Work IQ 온보딩 가이드",
-            "스킬 허브에서 이어진 SharePoint 기반 M365 Copilot 스킬 공유 체계",
-          ],
-        },
-      ],
+      "value": "GenOS",
+      "label": "비교 대상 플랫폼"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "내 역할과 협업 범위",
+      "bullets": [
+        "FabriX 1.7 직접 테스트와 GenOS 비교를 담당했습니다. 2.0 분석을 비롯한 나머지 비교·보고 업무는 다른 담당자들이 수행했습니다."
+      ]
     },
+    {
+      "heading": "비교 목적",
+      "bullets": [
+        "금융사 내부 업무망에서 실제로 활용할 수 있는 기능과 제약을 확인하고 GenOS와 비교했습니다.",
+        "직접 확인한 기능을 바탕으로 두 플랫폼의 활용 범위를 검토했습니다."
+      ]
+    }
+  ]
+},
+    {
+  "title": "M365 Copilot PoC와 활용 지원",
+  "subtitle": "기능 검증·사용 가이드·증권 현업 인터뷰",
+  "period": "2026.06 – 2026.09",
+  "org": "삼성금융 AI센터",
+  "role": "기능 PoC, 스킬 사용 환경 구성, Work IQ 가이드, 증권 인터뷰, MS 질의응답",
+  "summary": "2026년 6월부터 9월 말까지 M365 Copilot 기능을 테스트하고 스킬 활용 환경과 Work IQ 가이드를 만들었습니다. 증권 담당으로 실무자·사용자 인터뷰를 수행했으며, 결과는 협의체를 통해 4사에 공유됐습니다.",
+  "problem": "금융 업무에서 M365를 활용하려면 기능 소개뿐 아니라 실제 동작, 문서 반입·반출 정책, 운영 방식과 사용자의 업무 요구를 함께 파악해야 했습니다.",
+  "approach": "기능을 직접 테스트하고 현업의 사용 맥락을 인터뷰했습니다. 기술 로드맵·보안 관련 질문은 MS 질의응답으로 확인하고, 결과를 실무 가이드와 공유 자료로 정리했습니다.",
+  "metrics": [
+    {
+      "value": "4",
+      "label": "개월간 지속한 PoC"
+    },
+    {
+      "value": "4",
+      "label": "결과를 공유받은 관계사"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "내 역할과 협업 범위",
+      "bullets": [
+        "기능 테스트, 스킬 사용 환경 구성, Work IQ 분석·가이드 작성을 담당했습니다. 인터뷰는 증권 담당으로 수행했고, 4사 협의체 운영은 다른 담당자가 맡았습니다."
+      ]
+    },
+    {
+      "heading": "기능 테스트와 스킬 활용",
+      "bullets": [
+        "6월부터 9월 말까지 M365 기능을 지속적으로 테스트했습니다. 8월에는 OneNote와 Notebooks를 검토했습니다.",
+        "기존 skill-creator를 사내 사용에 맞게 수정했습니다. 최종 산출물에 따른 기능별 이름 접두어, SharePoint의 유형별 저장 위치, Word·PPT 스킬의 공용 DESIGN.md 참조 규칙을 반영하고 SharePoint에 저장했습니다. 사용자는 Copilot 채팅에서 해당 문서를 @로 언급하거나 첨부해 업무용 스킬을 생성할 수 있도록 했습니다.",
+        "생성된 스킬을 다운로드한 뒤 SharePoint에 다시 업로드하고, 이후 채팅에서도 @로 언급하거나 첨부해 재사용하는 흐름을 마련했습니다. 스킬 생성부터 저장·재사용까지 기존 M365 환경 안에서 이어지도록 구성했습니다."
+      ]
+    },
+    {
+      "heading": "Work IQ 분석과 가이드",
+      "bullets": [
+        "Work IQ를 심층 분석하고 개념·온보딩·레퍼런스 가이드를 작성했습니다. 사용자가 필요한 설정과 업무 정보가 Copilot에 반영되는 과정을 이해하도록 정리했습니다."
+      ]
+    },
+    {
+      "heading": "증권 인터뷰와 MS 질의응답",
+      "bullets": [
+        "7월 말부터 증권 실무자를 대상으로 도입 현황, 문서 반입·반출 정책, 기능·성능, 조직·운영 방식, 멀티 AI 플랫폼 전략을 조사했습니다.",
+        "사용자에게는 실제 업무, 활용 사례, 사용 팁과 개선 의견을 확인했습니다. 기술 로드맵·보안 등에 관한 MS 질의응답도 수행했습니다."
+      ]
+    },
+    {
+      "heading": "산출물과 공유",
+      "bullets": [
+        "기능 테스트 결과, 스킬 활용 자료, Work IQ 가이드, 인터뷰 결과를 정리했습니다. 이 내용은 실무 협의체를 통해 금융 4사에 공유됐습니다."
+      ]
+    }
+  ]
+},
     {
       title: "Work IQ 온보딩 가이드",
       image: { alt: "Work IQ 세팅 가이드: 4단계 12개 항목, 첫 세팅 약 30분" },
@@ -1189,17 +1210,17 @@ const ko = {
         { caption: "세팅 가이드 — 4단계 12개 항목과 진행 체크리스트" },
         { caption: "항목마다 리드타임, 하는 방법, 확인 방법" },
         { caption: "개념 가이드 — Work IQ를 5개 계층으로, 핵심은 Data · Memory · Inference" },
-        { caption: "레퍼런스 — 변경 유형 14개의 실측 리드타임" },
+        { caption: "레퍼런스 — 변경 유형 14개의 반영 시간 안내" },
         { caption: "레퍼런스 — PoC 테스트 결과와 가이드에 반영한 시사점" },
       ],
       subtitle: "M365 Copilot이 내 업무 자료를 제대로 찾게 하기",
       org: "삼성금융 AI센터",
       role: "PoC 수행, 3부작 가이드 작성",
-      summary: "Microsoft Work IQ의 구조와, Copilot이 내 업무 데이터로 답하게 하려면 무엇을 설정해야 하는지를 개념·세팅·레퍼런스 3부작으로 정리했습니다. 모든 권장 사항은 실측 리드타임에 근거합니다.",
-      problem: "Copilot 관련 질문 1위는 “저장했는데 왜 안 나와요?”였습니다. 프로필·OneDrive·SharePoint 변경이 Copilot에 반영되기까지 얼마나 걸리는지, 어떤 파일 습관이 도움이 되는지 아무도 몰랐습니다.",
+      summary: "Microsoft Work IQ의 구조와, Copilot이 내 업무 데이터로 답하게 하려면 무엇을 설정해야 하는지를 개념·세팅·레퍼런스 3부작으로 정리했습니다. 2026년 8~9월 생명 테넌트에서 수행한 테스트 결과와 관찰 내용을 반영했습니다.",
+      problem: "사용자로부터 저장한 자료를 Copilot이 찾지 못한다는 문의를 받았고, 직접 사용하는 과정에서도 같은 문제를 경험했습니다. 설정·검색 동작·변경 반영 시간을 조사해 사용자가 따라 할 수 있는 가이드로 정리했습니다.",
       approach: "직접 쟀습니다. 삼성생명 M365 테넌트에서 PoC를 돌려 변경 사항별 Copilot Chat 반영 시간을 측정했고, 그 결과를 체크리스트형 세팅 가이드와 팀 파일 규칙으로 만들었습니다.",
       metrics: [
-        { value: "14개", label: "측정한 리드타임 항목" },
+        { value: "14개", label: "반영 시간을 정리한 항목" },
         { value: "12개", label: "파일 관리 규칙" },
         { value: "약 30분", label: "첫 세팅 시간, 관리자 권한 불필요" },
       ],
@@ -1223,7 +1244,9 @@ const ko = {
           bullets: [
             "리드타임 요약표: 예) OneNote 새 페이지는 약 2분 뒤 검색, SharePoint 새 문서는 다음 날부터 동료에게 노출",
             "팀 공지에 그대로 붙여 쓸 수 있는 파일 관리 규칙",
-            "2026.08.27~09.04 PoC 테스트 6종",
+            "2026.08.27~09.04 생명 테넌트·Copilot Chat 웹에서 6종의 테스트 수행. 관찰 결과는 해당 환경과 시점에 한정해 안내",
+            "직접 구성한 개정본 구분 테스트: 판매개시일·종료일 정보가 없을 때 서로 다른 개정본이 섞인 답변을 관찰했습니다. 날짜 메타데이터를 추가한 뒤 해당 테스트에서 특정 개정본으로 답변이 일관되는 것을 확인하고, 버전·기간을 라이브러리 열로 관리하도록 안내했습니다.",
+            "검색과 접근 구분: 일반 검색에서 찾지 못한 문서도 링크로 지정하면 읽을 수 있는 사례를 확인했습니다. 급한 문서는 직접 지정하고, 변경 반영 여부는 다음 날 새 세션에서 다시 확인하도록 가이드에 반영했습니다.",
           ],
         },
       ],
@@ -1237,12 +1260,12 @@ const ko = {
         { caption: "스킬 상세 — 버전, 경로, 검증 상태, 렌더링된 SKILL.md" },
         { caption: "업로드 & 검증 — 부족한 예시 스킬에 대한 SkillSpector 정적 분석과 100점 정량 점수" },
       ],
-      subtitle: "그룹 AI 에이전트를 위한 검증된 스킬 마켓플레이스",
+      subtitle: "AI혁신팀을 위한 스킬 선별·검증·공유 체계",
       org: "삼성금융 AI센터",
-      role: "담당 — 카탈로그, 검증 MCP 서버, 웹 UI, 추천기, CI",
+      role: "최초 제안·기획·구현 — 선별 기준, 카탈로그, 검증 MCP 서버, 웹 UI, CI (추천기는 협업자가 구현)",
       summary: "선별한 스킬 카탈로그와 이를 지키는 검증 서비스입니다. SKILL.md를 올리면 3단계 검증을 거치고, 부족하면 자동 개선하고, 머지 요청까지 열어줍니다. 통과한 스킬은 Claude Code에서 바로 설치할 수 있습니다.",
-      problem: "공개 에이전트 스킬은 1만 개를 넘었지만 품질·보안·금융 업무 적합성에 대한 공통 기준이 없었습니다. 팀마다 같은 스킬을 다시 검토하거나, 검토 없이 설치하고 있었습니다.",
-      approach: "관련 있는 스킬만 작게 선별하고, 누구나 호출할 수 있는 검증 도구를 만들고, 엔지니어가 이미 쓰는 Git 리뷰 흐름으로 통과한 스킬만 배포했습니다.",
+      problem: "공개 스킬을 검증 없이 도입하면 품질 편차와 보안 위험이 발생할 수 있다고 판단했습니다. 스킬의 지침·의존성·업무 적합성을 검토하고 조직에서 공유하기 위한 스킬 허브를 먼저 제안했습니다.",
+      approach: "직무에 맞는 스킬 선별 기준을 세우고, 보안·완성도·AI 정성 검증과 플랫폼 실행 검증을 구분했습니다. 검증·개선·재검증·제출을 연결하는 서비스와 웹 UI를 구현했습니다.",
       metrics: [{ label: "공개 스킬 약 700개 중 선별" }, { label: "자동 검증 통과" }, { label: "현재 활성 스킬 (7개 카테고리)" }, { label: "두 저장소 커밋 223개 중 내 커밋" }],
       sections: [
         {
@@ -1258,7 +1281,7 @@ const ko = {
           heading: "배포",
           bullets: [
             "submit_skill이 재검증 후 제출자 본인 명의로 GitLab 머지 요청을 생성, PASS가 아니면 [FORCE] 표시와 사유를 붙여 강제 제출 가능",
-            "모든 호출을 판정·단계별 소요 시간·콘텐츠 해시와 함께 JSONL 감사 로그로 기록",
+            "모든 호출을 판정·단계별 소요 시간·콘텐츠 해시와 함께 JSONL 감사 로그로 기록. REVIEW는 사람이 선택적으로 추가 확인하면 좋은 항목을 안내하는 표시로 사용",
           ],
         },
         {
@@ -1266,14 +1289,14 @@ const ko = {
           bullets: [
             "선별: 8개 축 가중치 점수(직무 관련성, 필요 스킬 매칭, 금융 도메인, 완성도, 보안, 출처 신뢰도, 범용성, 중복 제거) → AI 리뷰 → 사람 리뷰",
             "각 스킬을 Claude Code 플러그인으로 노출, SKILL.md frontmatter로 marketplace.json을 자동 생성하고 머지 후 CI가 동기화",
-            "추천기: 직무에 대해 4~8턴 대화 → 키워드 검색으로 상위 30개 → LLM이 설치할 10~15개 선택",
+            "추천기(협업자 구현): 직무에 대해 4~8턴 대화 → 키워드 검색으로 상위 30개 → LLM이 설치할 10~15개 선택",
           ],
         },
         {
           heading: "결과",
           bullets: [
-            "센터장 보고를 통해 인증 스킬 거버넌스와 관계사 간 보안 검토 합의의 방향을 정함",
-            "SharePoint 기반 M365 Copilot 스킬 공유 체계로 확장",
+            "구축한 스킬 허브를 AI혁신팀에 제공했습니다. 사용자 피드백은 아직 수집하지 않아 업무 생산성 개선 효과는 측정하지 않았습니다",
+            "팀에서 스킬을 선별·검증·개선·공유할 수 있는 공통 절차와 도구를 마련했습니다",
           ],
         },
       ],
@@ -1282,89 +1305,56 @@ const ko = {
       title: "클라우드 에이전트 아키텍처 PoC",
       subtitle: "RAG 에이전트, Databricks와 Microsoft Foundry 비교",
       org: "삼성금융 AI센터",
-      role: "세 가지 구성 모두 구축, 비교 기준 설계",
-      summary: "보험 분쟁 데이터 위에 같은 RAG 에이전트를 세 가지 방식으로 만들어, 그룹 에이전트를 데이터 플랫폼과 어떤 관계로 둘지 판단할 근거를 만들었습니다.",
-      problem: "에이전트를 데이터 옆(Databricks)에 둘지, 모델 플랫폼(Foundry)에 둘지, 둘로 나눌지. 각 안마다 지지하는 쪽은 있었지만 함께 볼 숫자는 없었습니다.",
-      approach: "모델, 임베딩, 리랭커, 검색 방식을 고정하고 에이전트를 세 번 만든 뒤, 품질·운영·비용 측면의 비교 기준을 정했습니다.",
-      metrics: [{ label: "아키텍처 비교" }, { label: "판례·분쟁 사례 데이터" }, { label: "구축 일수 (Databricks vs Foundry)" }],
+      period: "2026.03 · 마지막 2주 · 3월 30일 최종 보고",
+      role: "단독 담당 — RAG 에이전트 2개 구현, golden dataset 제작, 평가 코드, 연계 리스크 분석, 최종 보고",
+      summary: "데이터 플랫폼으로 이미 선정된 AWS Databricks와 Azure Foundry의 연계 방식과 성능을 2026년 3월 마지막 2주 동안 검증하고, 3월 30일 최종 보고했습니다. 단독 환경 2개의 RAG 성능을 평가하고, 인증 문제로 연결하지 못한 에이전트 간 연계 구성은 비용·운영 리스크를 분석했습니다.",
+      problem: "Databricks 도입은 결정된 상태였습니다. 에이전트 플랫폼으로 Foundry를 사용할 경우 Databricks의 에이전트를 호출할지, 데이터만 Azure로 공유할지, 각 방식이 Databricks 단독 환경과 비교해 어떤 차이가 있는지 검증해야 했습니다.",
+      approach: "Databricks 단독과 Foundry 단독 RAG 에이전트를 구현해 공통 golden dataset으로 평가했습니다. Databricks + Foundry의 에이전트 호출은 인증 문제로 실제 연결하지 못해 연계 리스크 분석까지 수행했습니다.",
+      metrics: [{ label: "검토한 아키텍처" }, { label: "공통 golden dataset으로 평가한 RAG 에이전트" }, { label: "구축 일수 (Databricks vs Foundry)" }],
       sections: [
         {
-          heading: "구성",
+          heading: "세 가지 구성과 평가데이터",
           bullets: [
-            "데이터: 보험 판례 360건, 금융감독원 분쟁조정 사례 687건, 골든 Q&A 세트",
-            "모든 구성에 동일 조건 적용: GPT-4.1, text-embedding-3-large, 리랭커, BM25 + 벡터 하이브리드 검색",
+            "Databricks 단독: Databricks 안에서 에이전트를 실행하는 환경",
+            "Databricks + Foundry: Azure에서 Genie·Mosaic 에이전트를 A2A로 호출하는 구성 검토. 인증 문제로 실제 연결하지 못해 리스크 분석까지만 수행",
+            "Foundry 단독: Databricks의 data sharing으로 데이터만 Azure로 가져와 Foundry에서 에이전트를 실행하는 환경",
+            "평가데이터: 생명보험협회 데이터셋과 판례집을 기반으로 구성한 golden dataset",
+            "golden dataset 평가는 Databricks 단독과 Foundry 단독에 수행. 에이전트 간 연계 구성의 종단 간 성능은 미검증",
           ],
         },
         {
           heading: "평가 기준",
           bullets: [
-            "검색 품질, 답변 정확도, 환각 비율",
-            "플랫폼 간 오버헤드를 포함한 지연 시간, egress 비용",
+            "두 단독 에이전트 환경의 검색·답변 성능 평가",
+            "플랫폼 간 지연과 egress 비용은 연계 리스크로 분석. Case 2의 종단 간 실측은 수행하지 않음",
             "트레이싱·평가·비용 모니터링, 사용자 단위 접근 제어",
           ],
         },
         {
+  "heading": "실측 결과와 해석",
+  "bullets": [
+    "첨부 비교 보고서 기준, Databricks 단독과 Foundry 단독의 검색 Precision은 각각 48.0%·47.1%, Recall은 76.2%·61.1%, Full Match는 84/120건(70.0%)·67/120건(55.8%)이었습니다.",
+    "답변 Answer F1은 0.1947·0.1929로 비슷했습니다. 검색에서 더 많은 정답 근거를 찾았다는 결과가 답변 유사도 지표의 큰 차이로 이어지지는 않았습니다.",
+    "평균 응답 시간은 17.81초·7.93초였습니다. Databricks 측에는 외부 모델 호출 지연이 포함되어 있어, 플랫폼 자체 속도가 아닌 당시 구현 구성의 결과로 해석했습니다.",
+    "초기 구축 난이도와 구현 자유도뿐 아니라 트레이싱, 평가·비용 모니터링, 사용자·데이터 접근 권한도 함께 비교했습니다. 관찰 결과는 2026년 3월 테스트 환경과 당시 부여된 권한 범위에 한정됩니다."
+  ]
+},
+        {
           heading: "구축하며 확인한 점",
           bullets: [
             "Databricks 단독 구성은 1일(권한 포함 4일), Foundry 단독은 2일(권한·리소스 포함 7일) 소요",
-            "Delta Sharing은 불안정해 권장되지 않아, 플랫폼 간 데이터 이동은 다른 경로가 필요했음",
+            "Azure Foundry 에이전트에서 AWS Databricks의 데이터를 연계하는 것은 기술적으로 가능했지만, 비용과 운영 측면의 비효율성이 컸습니다",
+            "비용: Azure AI Search를 사용하는 검토 구성에서는 양쪽 플랫폼의 임베딩 벡터 이중 적재, 클라우드 간 데이터 반출(egress), 전용선 비용을 고려해야 했습니다.",
+            "운영: 청킹·임베딩·데이터 카탈로그의 이중 관리와 AWS 원본 변경에 따른 Azure AI Search 인덱스 재동기화 파이프라인이 필요했습니다.",
+            "임베딩 모델: 저장된 문서 벡터와 검색 질의의 임베딩 모델이 호환되는지 관리해야 했습니다. 서로 다른 벡터 공간에서는 유사도 비교가 유효하지 않으며, 모델 변경 시 벡터·인덱스 갱신까지 고려해야 했습니다.",
+            "인증과 지연: Entra ID와 AWS IAM의 서로 다른 인증체계, 플랫폼 간 호출에 따른 추가 지연을 검토했습니다.",
+            "장애 대응과 감사추적: Azure·AWS·Databricks에 걸친 원인 분석과 두 클라우드 로그를 수동으로 조합하는 운영 부담을 확인했습니다.",
+            "3월 30일 최종 보고에서 연계 가능 여부와 도입 시 감수해야 할 비용·운영 부담을 구분해 정리했습니다",
           ],
         },
       ],
     },
-    {
-      title: "에이전트 프레임워크 벤치마크",
-      subtitle: "금융 분석 에이전트, effgen과 LangGraph 비교",
-      org: "삼성금융 AI센터",
-      role: "벤치마크 설계, 두 에이전트 구현, 리포트 작성",
-      summary: "같은 금융 분석 에이전트를 effgen과 LangGraph로 각각 만들고, 5개 모델 × 9개 태스크로 돌려 프레임워크별 장단을 비교했습니다.",
-      problem: "새 에이전트 프레임워크들은 LangGraph보다 토큰을 덜 쓴다고 했지만, 근거마다 프롬프트·도구·모델이 달라 비교할 수 없었습니다.",
-      approach: "프레임워크만 바꿨습니다. 시스템 프롬프트, 도구(계산기, Python REPL, 웹 검색), API 백엔드, 단순 계산부터 기업 비교·오류 주입까지 9개 금융 태스크를 모두 동일하게 뒀습니다.",
-      metrics: [
-        { label: "effgen의 토큰 절감" },
-        { label: "45회 중 성공 (LangGraph vs effgen)" },
-        { label: "effgen이 느린 정도" },
-      ],
-      sections: [
-        {
-          heading: "설정",
-          bullets: [
-            "모델 5종: Gemini 3.1 Flash-Lite, Qwen3.5 9B·122B, gpt-oss 20B·120B",
-            "태스크 9개: 단순·중간·복잡·오류 복구 난이도",
-            "태스크별 토큰, 지연 시간, 툴 호출 수, 성공률 측정",
-          ],
-        },
-        {
-          heading: "결과",
-          bullets: [
-            "복잡한 태스크에서 effgen이 토큰을 크게 아낌 — LangGraph ReAct 루프는 기업 비교 태스크에서 평균 261K 토큰 소모",
-            "effgen 실패는 대부분 gpt-oss 계열의 max iterations 도달 — 프레임워크 한계보다 프롬프트 형식 불일치가 원인",
-            "권고: 토큰 비용이 우선이면 effgen, 안정적 운영이 우선이면 LangGraph",
-          ],
-        },
-      ],
-    },
-    {
-      title: "AI센터 포털 프로토타입",
-      subtitle: "센터의 과제·에이전트·모델을 한곳에서",
-      org: "삼성금융 AI센터",
-      role: "Figma 설계, 프로토타입 구현",
-      summary: "AI센터의 과제, 에이전트, 모델 벤치마크, 공용 자산을 한곳에 모은 클릭 가능한 포털 프로토타입입니다.",
-      problem: "센터의 AI 과제, 에이전트, 모델, 재사용 자산 정보가 여러 채널에 흩어져 있어 무엇이 이미 있는지 알기 어려웠습니다.",
-      approach: "Figma로 정보 구조를 먼저 잡고, 샘플 데이터로 실제 흐름을 확인할 수 있는 React 프로토타입을 만들었습니다.",
-      sections: [
-        {
-          heading: "화면",
-          bullets: [
-            "모니터링 대시보드: 팀별 과제의 AI 성숙도, 상태, 진행률",
-            "에이전트 대시보드와 에이전트·태스크 상세",
-            "벤치마크 지표 설명과 모델 추가 요청이 있는 모델 리더보드",
-            "데이터·애플리케이션·파이썬 라이브러리·에이전트·MCP 마켓플레이스와 관리자 화면",
-            "뉴스, 위키, 피드백, AI 플레이그라운드",
-          ],
-        },
-      ],
-    },
+
     {
       title: "물어보험 (Ask-Insurance)",
       image: { alt: "쟁점 카드와 인용된 약관 발췌문이 보이는 물어보험 답변 화면" },
@@ -1488,33 +1478,79 @@ const ko = {
       ],
     },
     {
-      title: "LLM 학습 · 평가 데이터",
-      subtitle: "금융 도메인 데이터와 평가 체계",
-      org: "삼성금융 AI센터",
-      role: "데이터 파이프라인, 평가 체계, 채점 자동화",
-      summary: "금융 도서 530권 이상으로 만든 금융 LLM 학습·평가 데이터, 그리고 '금융'이라는 라벨 하나로 끝나지 않는 평가 체계.",
-      problem: "'금융' 벤치마크 점수 하나로는 모델이 보험 심사를 잘하는지, 세무를 잘하는지, 준법을 잘하는지 4개 관계사가 알 수 없었습니다.",
-      approach: "원천 도서를 학습 데이터로 구조화하고, 결과를 도메인별·역량별로 읽을 수 있게 평가를 다시 설계했습니다.",
-      metrics: [{ label: "금융 도서 구조화" }, { label: "관계사 도메인 매핑" }],
-      sections: [
-        {
-          heading: "학습 데이터",
-          bullets: [
-            "금융 도서 530권 이상을 메타데이터·QA 쌍을 갖춘 구조화 JSON으로 변환, 중복 제거와 품질 검사",
-            "생명·화재·카드·증권의 도메인 커버리지를 매핑해 빈 영역 우선순위 선정",
-          ],
-        },
-        {
-          heading: "평가 체계",
-          bullets: [
-            "기초: 경제, 회계, 세무, 노동법, 통계",
-            "실무: 준법, 리스크 관리, 자산운용, 보험, 디지털 금융",
-            "방식: 복수 정답 객관식, 단답·서술형, 유사도 채점, LLM 보조 승률",
-            "데이터셋 버전 관리, 프롬프트·정답 감사, 채점 재현성 자동화",
-          ],
-        },
-      ],
+  "title": "금융 LLM 데이터 구축과 성능평가",
+  "subtitle": "금융 업무 분석부터 데이터 품질 관리와 모델 검증까지",
+  "org": "삼성금융 AI센터",
+  "role": "데이터 수급·검수 전 과정 단독 담당, 평가 기획·코드 구현·실행",
+  "summary": "금융 4사의 업무를 기준으로 도서 530권의 데이터 수급과 품질 관리를 담당하고, 금융지식 평가 체계와 코드를 구축했습니다.",
+  "problem": "데이터의 양만으로는 금융 4사의 업무 지식이 충분히 담겼는지 알 수 없었고, 포괄적인 금융 점수만으로는 영역별 지식 수준을 확인하기 어려웠습니다.",
+  "approach": "실제 금융 업무를 도서 선정 기준에 연결하고, 문맥을 보존하는 정제·검수 기준을 수립한 뒤 같은 업무 맥락에 맞춰 모델을 평가했습니다.",
+  "metrics": [
+    {
+      "value": "530",
+      "label": "최종 납품 도서"
     },
+    {
+      "value": "4",
+      "label": "업무 범위를 분석한 관계사"
+    },
+    {
+      "value": "13",
+      "label": "평가 세부 영역"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "프로젝트 배경",
+      "bullets": [
+        "금융 특화 모델을 학습시키려면 데이터의 양뿐 아니라 생명·화재·카드·증권의 실제 업무를 얼마나 고르게 담는지, 정제 과정에서 지식과 문맥이 보존되는지를 함께 관리해야 했습니다. 학습 이후에는 금융 업무에 필요한 지식을 모델이 얼마나 갖췄는지 확인할 평가 체계도 필요했습니다."
+      ]
+    },
+    {
+      "heading": "내 역할과 협업 범위",
+      "bullets": [
+        "학습 데이터 목표량 산정, 도서 선정, 품질·정제 기준 설계, 외부 가공 업체와의 협의, 납품 검수와 수정 요청, 최종 인수까지 단독 담당했습니다. 최종 납품 규모는 금융 도서 530권입니다.",
+        "평가 고도화 기획부터 AI를 활용한 평가 코드 구현과 성능평가까지 담당했습니다. 도서 가공은 외부 업체와 협업했으며, 모델 학습은 별도 팀이 수행했습니다."
+      ]
+    },
+    {
+      "heading": "01 · 연구를 데이터 수급 계획으로 연결",
+      "bullets": [
+        "도메인 특화 모델의 연구·구축 사례를 조사해 대상 모델의 학습에 필요한 데이터 규모를 추정했습니다. 이론적인 필요량과 현실적인 수급 가능량을 구분하고, 고품질 데이터를 우선 확보하는 목표와 선별 기준을 세웠습니다."
+      ]
+    },
+    {
+      "heading": "02 · 금융 4사 업무를 기준으로 도서 선정",
+      "bullets": [
+        "각 사의 조직도와 실제 업무 분장을 조사해 공통 업무와 업권별 고유 업무를 정리했습니다. 내부통제, 자산운용, 리스크관리, 보험계약, 보상처리 등 업무 영역을 도서 선정 기준에 연결했습니다.",
+        "출간일·저자·제목으로 1차 검토한 뒤 목차와 미리보기로 내용의 적합성을 확인했습니다. 업권별 도서 분포와 부족 영역을 재검토하고 추가 도서를 발굴해 업무 커버리지를 보완했습니다."
+      ]
+    },
+    {
+      "heading": "03 · 금융 지식의 문맥을 보존하는 품질 관리",
+      "bullets": [
+        "도서 선정 기준과 납품 데이터의 정제 기준을 구분해 설계했습니다. 표·수식·이미지·본문의 처리 규칙과 문제·보기·정답·해설을 연결하는 기준을 마련했습니다.",
+        "검수 과정에서 구조화할 수 있는 표까지 이미지로 처리되거나, 캡션이 누락되어 설명 대상과 연결되지 않는 문제를 발견했습니다. 본문 안의 요약 카드처럼 별도로 배치된 텍스트가 부적절한 위치에 삽입되어 읽는 흐름을 끊는 경우도 있었습니다.",
+        "이러한 사례를 바탕으로 이미지·표·캡션·수식의 처리 기준을 재조정했습니다. 행·열을 구분할 수 있는 표는 LaTeX로 구조화하고 제목·주석·출처를 메타데이터로 연결하되, 복잡한 레이아웃은 분리하거나 이미지로 보존하도록 예외 기준도 마련했습니다. 각 요소를 추출하는 데 그치지 않고 본문과의 관계와 읽는 순서를 최대한 보존하도록 업체와 협의했습니다. 합의한 기준은 이후 납품분에도 공통 적용했습니다. 새로운 예외가 발견되면 사례별로 수정하고 처리 방식을 정규화하며 기준을 보완했고, 수정 결과를 재검수한 뒤 최종 인수했습니다."
+      ]
+    },
+    {
+      "heading": "04 · 금융 업무 기반 평가 체계와 코드 구현",
+      "bullets": [
+        "평가 범위를 금융기초·금융실무의 2개 대분류와 13개 세부 영역으로 재구성했습니다. 금융기초에는 경제·경영·회계·세무·노무·통계를, 금융실무에는 내부통제·영업·디지털·자산운용·리스크관리·보험계약·보상처리를 반영했습니다.",
+        "객관식 정답률뿐 아니라 복수 정답과 주관식 등으로 지식 이해를 확인하는 평가 방식을 기획했습니다. 학습·평가 데이터의 중복 점검과 채점 신뢰성 확보를 평가 설계에 포함했습니다. 평가 문항의 오류는 데이터 구축 단계에서 발견·처리하고 검수를 거친 뒤 평가에 사용해, 문항 오류가 모델 점수에 미치는 영향을 줄였습니다.",
+        "AI를 활용해 평가 코드를 구현하고 자체 모델의 학습 전후 및 외부 모델의 성능을 비교했습니다. 평가 기준을 정하는 일부터 실제 평가 실행과 결과 정리까지 담당했습니다."
+      ]
+    },
+    {
+      "heading": "산출물과 기여",
+      "bullets": [
+        "금융 도서 530권의 최종 납품 데이터, 업무 커버리지 기반 선정 기준, 유형별 정제·검수 기준, 금융지식 평가 체계와 평가 코드를 구축했습니다.",
+        "금융 업무 분석을 데이터 선정과 모델 검증에 일관되게 연결했습니다. 데이터의 규모뿐 아니라 어떤 업무 지식을 담고 무엇을 검증할 것인지 설명할 수 있도록 했습니다."
+      ]
+    }
+  ]
+},
     {
       title: "사내 LLM QA 서비스",
       subtitle: "사내 규정·매뉴얼 대상 RAG",
@@ -1582,7 +1618,7 @@ const ko = {
       photoAlt: "문예진 사진",
       workTitle: "대표 작업",
       readCase: "자세히 보기",
-      allProjects: "프로젝트 12개 전체 보기",
+      allProjects: "프로젝트 전체 보기",
       alsoTitle: "글쓰기 · 강의 · 커뮤니티",
       alsoLede: "만드는 일 말고 하는 일들.",
       now: "현재", nowV: "AI 엔지니어 · PoC 담당, 삼성금융 AI센터",
@@ -1643,7 +1679,11 @@ const ko = {
 // Deep merge: objects by key, arrays by index. `over` wins on scalars.
 function mergeDeep(base, over) {
   if (over === undefined) return base;
-  if (Array.isArray(base) && Array.isArray(over)) return base.map((b, i) => mergeDeep(b, over[i]));
+  if (Array.isArray(base) && Array.isArray(over)) {
+    // Translated prose is complete, while object arrays can contain partial overrides.
+    if (over.every((item) => typeof item === "string")) return over;
+    return over.map((item, i) => mergeDeep(base[i], item));
+  }
   if (base && typeof base === "object" && over && typeof over === "object") {
     const out = { ...base };
     for (const k of Object.keys(over)) out[k] = mergeDeep(base[k], over[k]);
