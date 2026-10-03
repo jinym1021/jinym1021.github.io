@@ -544,6 +544,45 @@ const en = {
     },
     {
       id: "ask-insurance",
+      caseStudy: {
+        "deck": "Understand the issues. Find the evidence.",
+        "overview": "A clearer starting point for an insurance claim.",
+        "decision": "Evidence before a verdict",
+        "principle": "Show what needs to be checked, with the sources to check it.",
+        "experience": "From a question to a clearer next step",
+        "experienceIntro": "The MVP walks through a situation, sample policy information, clarifying questions and a source-backed response.",
+        "behind": "Behind the answer",
+        "behindIntro": "The product flow connects policy and dispute-case retrieval with a privacy guardrail. My contribution focused on planning and the guardrail implementation.",
+        "results": "What was built and evaluated",
+        "resultNote": "Guardrail figures describe the recorded evaluation set, not production guarantees. These are implementation and component-level results, not evidence of better claim outcomes.",
+        "steps": [
+          {
+            "image": 0,
+            "title": "Start with the situation",
+            "body": "Describe what happened in everyday language. The service is designed for questions before a claim and after a denial."
+          },
+          {
+            "image": 1,
+            "title": "Bring policy context into the conversation",
+            "body": "The MVP demonstrates this step with synthetic policy data. Live MyData integration is not implemented."
+          },
+          {
+            "image": 2,
+            "title": "Clarify the missing facts",
+            "body": "Follow-up questions help establish the facts needed to examine the relevant policy clauses and dispute cases."
+          },
+          {
+            "image": 4,
+            "title": "Read the evidence alongside the answer",
+            "body": "Issue cards connect the explanation to policy excerpts and original sources, with the documents and facts that still need review."
+          },
+          {
+            "image": 5,
+            "title": "Make the next checks concrete",
+            "body": "The burn-scar scenario illustrates how the response changes with the situation. The answer supports review; it does not determine payment."
+          }
+        ]
+      },
       tint: "butter",
       visual: "image",
       image: { src: "assets/img/ask-insurance-answer.jpg", alt: "Ask-Insurance answer screen with issue cards and the cited policy excerpt" },
@@ -551,7 +590,7 @@ const en = {
       galleryNote: "Frames from the MVP demo video. Demo accounts and personas use synthetic data.",
       gallery: [
         { src: "assets/img/ask-insurance-home.jpg", caption: "Home — describe the situation before a claim or after a denial" },
-        { src: "assets/img/ask-insurance-mydata.jpg", caption: "MyData — the user's policies, pulled in before the chat starts" },
+        { src: "assets/img/ask-insurance-mydata.jpg", caption: "Policy context — synthetic policy data used in the MVP demo" },
         { src: "assets/img/ask-insurance-questions.jpg", caption: "Clarifying questions — only the facts that change the outcome" },
         { src: "assets/img/ask-insurance-privacy-step.jpg", caption: "Work steps — the privacy guardrail runs before evidence and answer" },
         { src: "assets/img/ask-insurance-answer.jpg", caption: "Answer — issue cards with a cited policy excerpt and a link to the original" },
@@ -1358,10 +1397,49 @@ const ko = {
     {
       title: "물어보험 (Ask-Insurance)",
       image: { alt: "쟁점 카드와 인용된 약관 발췌문이 보이는 물어보험 답변 화면" },
+      caseStudy: {
+        "deck": "궁금한 쟁점부터, 확인할 근거까지.",
+        "overview": "보험 청구를 준비하는 더 명확한 출발점.",
+        "decision": "판단에 앞서, 근거부터",
+        "principle": "결론을 대신하지 않고, 확인해야 할 근거를 보여드립니다.",
+        "experience": "질문에서 다음 확인 단계까지",
+        "experienceIntro": "상황 입력부터 가상 가입 정보, 추가 질문, 근거가 연결된 답변까지 MVP의 실제 화면으로 살펴봅니다.",
+        "behind": "답변 뒤의 설계와 구현",
+        "behindIntro": "약관·분쟁 사례 검색과 개인정보 가드레일을 사용자 흐름에 연결했습니다. 기획과 개인정보 가드레일 구현을 중심으로 참여했습니다.",
+        "results": "구현하고 평가한 범위",
+        "resultNote": "가드레일 수치는 해당 평가 데이터에서 측정한 결과이며 운영 환경의 보장값이 아닙니다. 구현·구성요소 평가 결과로, 보험금 청구 성과 개선을 의미하지 않습니다.",
+        "steps": [
+          {
+            "image": 0,
+            "title": "일상의 언어로 상황을 설명합니다",
+            "body": "청구를 준비하거나 거절 사유가 궁금할 때, 겪은 상황부터 입력합니다."
+          },
+          {
+            "image": 1,
+            "title": "가입 정보를 상담 맥락에 연결합니다",
+            "body": "MVP에서는 가상의 가입 정보로 흐름을 시연합니다. 실제 마이데이터 연동은 구현하지 않았습니다."
+          },
+          {
+            "image": 2,
+            "title": "판단에 필요한 사실을 더 확인합니다",
+            "body": "관련 약관과 분쟁 사례를 검토하는 데 필요한 정보가 부족하면 추가 질문으로 상황을 구체화합니다."
+          },
+          {
+            "image": 4,
+            "title": "설명과 근거를 함께 읽습니다",
+            "body": "쟁점 카드에서 약관 발췌문과 원문으로 연결하고, 추가로 확인할 사실과 준비할 서류를 안내합니다."
+          },
+          {
+            "image": 5,
+            "title": "상황에 맞는 다음 확인을 안내합니다",
+            "body": "화상 흉터 시나리오에서는 어떤 내용을 왜 확인해야 하는지 보여줍니다. 답변은 검토를 돕고, 지급 여부는 단정하지 않습니다."
+          }
+        ]
+      },
       galleryNote: "MVP 시연 영상에서 캡처했습니다. 시연 계정과 인물은 가상 데이터입니다.",
       gallery: [
         { caption: "홈 — 청구 전이든 지급거절 후든 상황을 적어서 시작" },
-        { caption: "마이데이터 — 상담 전에 가입 보험을 불러옴" },
+        { caption: "가입 정보 — MVP 시연용 가상 보험 데이터" },
         { caption: "확인 질문 — 결과를 바꾸는 사실만 추가로 질문" },
         { caption: "작업 과정 — 근거 준비와 답변 전에 개인정보 보호가 먼저 적용" },
         { caption: "답변 — 쟁점 카드, 인용된 약관 발췌문, 원문 링크" },

@@ -226,7 +226,7 @@
           <div class="m-grid" style="grid-template-columns:repeat(3,1fr)">${["Daily loads", "Partitions", "CDSW"].map((t) => `<div class="m-card"><b style="color:var(--ink)">${t}</b>${sk("w85")}${sk("w55")}</div>`).join("")}</div>
         </div>
       </div>`,
-    image: (p) => `<div class="shot"><img src="${p.image.src}" alt="${esc(p.image.alt)}" loading="lazy"/></div>`,
+    image: (p) => `<div class="shot"><div class="shot-bar" aria-hidden="true"><span class="shot-controls"><i></i><i></i><i></i></span><span class="shot-title">${esc(p.title)}</span></div><img src="${p.image.src}" alt="${esc(p.image.alt)}" loading="lazy"/></div>`,
   };
   const visual = (p) => (MOCKS[p.visual] ? MOCKS[p.visual](p) : "");
 
@@ -364,35 +364,66 @@
       const links = p.links.length
         ? p.links.map((l) => (l.private ? `<span class="muted">${esc(l.label)} (${T.private})</span>` : `<a href="${l.url}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`)).join("<br/>")
         : `<span class="muted">${T.internal}</span>`;
-      root.innerHTML = `
-        <section class="wrap">
-          <div class="case-hero" style="--tint:var(--${p.tint})">
-            <div class="crumbs"><a href="projects.html">${T.crumbs}</a><span>/</span>${tags(p)}</div>
-            <h1 class="p-title">${esc(p.title)}</h1>
-            <p class="p-sub">${esc(p.summary)}</p>
-            ${p.links.some((l) => !l.private) ? `<div class="cta">${p.links.filter((l) => !l.private).map((l, k) => `<a class="btn${k ? "" : " primary"}" href="${l.url}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
-            <div class="stage">${visual(p)}</div>
-          </div>
-          <dl class="facts">
-            <div><dt>${T.context}</dt><dd>${esc(p.org)}</dd></div>
-            <div><dt>${T.period}</dt><dd>${p.period}</dd></div>
-            <div><dt>${T.role}</dt><dd>${esc(p.role)}</dd></div>
-            <div><dt>${T.links}</dt><dd>${links}</dd></div>
-          </dl>
-          ${p.metrics && p.metrics.length ? `<div class="metrics">${p.metrics.map((m) => `<div class="metric"><div class="v">${esc(m.value)}</div><div class="l">${esc(m.label)}</div></div>`).join("")}</div>` : ""}
-          <div class="two"><div><h3>${T.problem}</h3><p>${esc(p.problem)}</p></div><div><h3>${T.approach}</h3><p>${esc(p.approach)}</p></div></div>
-          ${p.video ? `<div class="block"><h3>${T.demo}</h3><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${p.video}" title="${esc(p.title)} — ${esc(T.demo)}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div></div>` : ""}
-          ${(p.figures || []).map((f, k) => `<div class="block"><h3>${k === 0 ? T.flow : ""}</h3><figure class="figure-wrap"><div class="figure"><img src="${f.src}" alt="${esc(f.caption)}" loading="lazy"/></div><figcaption>${esc(f.caption)}</figcaption></figure></div>`).join("")}
-          ${p.gallery ? `<div class="block"><h3>${T.screens}</h3><div><div class="gallery">${p.gallery.map((g) => `<figure class="figure-wrap"><a class="figure" href="${g.src}" target="_blank" rel="noopener"><img src="${g.src}" alt="${esc(g.caption)}" loading="lazy"/></a><figcaption>${esc(g.caption)}</figcaption></figure>`).join("")}</div>${p.galleryNote ? `<p class="muted" style="font-size:15px;margin:14px 0 0">${esc(p.galleryNote)}</p>` : ""}</div></div>` : ""}
-          ${p.sections.map((s) => `<div class="block reveal"><h3>${esc(s.heading)}</h3><ul class="bullets">${s.bullets.map((b) => `<li>${hl(b)}</li>`).join("")}</ul></div>`).join("")}
-          <div class="block"><h3>${T.stack}</h3><div class="chips">${p.stack.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
-          <nav class="pager">
-            <a href="project.html?id=${prev.id}" style="--tint:var(--${prev.tint})"><span class="lbl">← ${T.prev}</span><span class="t">${esc(prev.title)}</span></a>
-            <a href="project.html?id=${next.id}" style="--tint:var(--${next.tint})"><span class="lbl">${T.next} →</span><span class="t">${esc(next.title)}</span></a>
-          </nav>
-        </section>`;
+      if (p.caseStudy) {
+        root.innerHTML = insuranceCase(p, T, links, prev, next);
+        return;
+      }
+      root.innerHTML = editorialCase(p, T, links, prev, next);
     },
   };
+
+  function editorialCase(p, T, links, prev, next) {
+    const ko = lang === "ko";
+    const shot = (g, eager = false) => `<a class="story-browser" href="${g.src}" target="_blank" rel="noopener"><img src="${g.src}" alt="${esc(g.caption || g.alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'}/></a>`;
+    const gallery = p.gallery || [];
+    const hero = p.image ? `<div class="story-cover ${gallery.length > 1 ? '' : 'story-cover-single'}">${gallery.length > 1 ? `<div class="story-cover-back">${shot(gallery.find(g => g.src !== p.image.src) || gallery[0])}</div>` : ''}<div class="story-cover-front">${shot(p.image, true)}</div></div>` : `<div class="story-concept">${visual(p)}<p class="story-note">${ko ? '프로젝트의 핵심 구성을 설명하기 위한 개념 시각화입니다.' : 'Concept illustration of the project scope.'}</p></div>`;
+    const chapter = (n, title, body) => `<section class="story-copy"><span class="story-index">${n}</span><h2>${esc(title)}</h2><p>${esc(body)}</p></section>`;
+    return `<article class="insurance-story editorial-story" style="--story-tint:var(--${p.tint});--story-soft:var(--${p.tint})">
+      <header class="story-hero"><div class="wrap"><a class="story-back" href="projects.html">← ${T.crumbs}</a><p class="story-eyebrow">${esc(p.org)}</p><h1>${esc(p.title)}</h1><p class="story-deck">${esc(p.subtitle)}</p>${hero}${p.galleryNote ? `<p class="story-note">${esc(p.galleryNote)}</p>` : ''}</div></header>
+      <div class="wrap story-overview"><div><p class="story-eyebrow">${ko ? '프로젝트 개요' : 'OVERVIEW'}</p><h2>${esc(p.subtitle)}</h2><p>${esc(p.summary)}</p></div><dl class="story-facts"><div><dt>${T.role}</dt><dd>${esc(p.role)}</dd></div><div><dt>${T.period}</dt><dd>${esc(p.period)}</dd></div><div><dt>${T.context}</dt><dd>${esc(p.org)}</dd></div><div><dt>${T.links}</dt><dd>${links}</dd></div></dl></div>
+      ${chapter('01', T.problem, p.problem)}
+      <div class="story-band">${chapter('02', T.approach, p.approach)}</div>
+      ${gallery.length ? `<section class="story-copy"><span class="story-index">03</span><h2>${T.screens}</h2>${p.galleryNote ? `<p>${esc(p.galleryNote)}</p>` : ''}</section>${gallery.map((g,i) => `<section class="story-feature ${i % 2 ? 'story-feature-reverse' : ''}"><div class="story-feature-text"><span class="story-eyebrow">${String(i + 1).padStart(2,'0')} / ${T.screens}</span><h2>${esc(g.caption)}</h2></div><figure>${shot(g)}</figure></section>`).join('')}` : ''}
+      ${(p.figures || []).map(f => `<figure class="story-wide"><img src="${f.src}" alt="${esc(f.caption)}" loading="lazy"/><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}
+      ${p.video ? `<section class="story-demo"><div class="story-copy"><h2>${T.demo}</h2></div><div class="story-wide video"><iframe src="https://www.youtube-nocookie.com/embed/${p.video}" title="${esc(p.title)} — ${esc(T.demo)}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div></section>` : ''}
+      <div class="story-details">${p.sections.map((section,i) => `<section class="story-detail"><div><span class="story-index">${String(i + (gallery.length ? 4 : 3)).padStart(2,'0')}</span><h2>${esc(section.heading)}</h2></div><ul class="bullets">${section.bullets.map(b=>`<li>${hl(b)}</li>`).join('')}</ul></section>`).join('')}</div>
+      ${p.metrics && p.metrics.length ? `<section class="story-results"><div class="wrap"><p class="story-eyebrow">${ko ? '프로젝트 기록' : 'PROJECT IN NUMBERS'}</p><h2>${ko ? '규모와 주요 수치' : 'Scope & key figures'}</h2><div class="story-metrics">${p.metrics.map(m=>`<div><strong>${esc(m.value)}</strong><p>${esc(m.label)}</p></div>`).join('')}</div></div></section>` : ''}
+      <section class="story-copy"><h2>${T.stack}</h2><div class="chips">${p.stack.map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div></section>
+      <nav class="pager wrap" aria-label="${ko ? '다른 프로젝트' : 'Other projects'}"><a href="project.html?id=${prev.id}" style="--tint:var(--${prev.tint})"><span class="lbl">← ${T.prev}</span><span class="t">${esc(prev.title)}</span></a><a href="project.html?id=${next.id}" style="--tint:var(--${next.tint})"><span class="lbl">${T.next} →</span><span class="t">${esc(next.title)}</span></a></nav>
+    </article>`;
+  }
+
+  // Editorial case study: real product screens paired with the existing evidence.
+  function insuranceCase(p, T, links, prev, next) {
+    const ko = lang === "ko";
+    const copy = p.caseStudy;
+    const screen = (g, eager = false) => `<a class="story-browser" href="${g.src}" target="_blank" rel="noopener"><span class="story-browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Ask-Insurance</span></span><img src="${g.src}" alt="${esc(g.caption)}" width="1518" height="946" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'}/></a>`;
+    const chapter = (n, title, body) => `<section class="story-copy"><span class="story-index">${n}</span><h2>${esc(title)}</h2>${body}</section>`;
+    return `<article class="insurance-story">
+      <header class="story-hero"><div class="wrap">
+        <a class="story-back" href="projects.html">← ${T.crumbs}</a>
+        <p class="story-eyebrow">FINANCIAL AI CHALLENGE · 2026</p>
+        <h1>${esc(p.title)}</h1><p class="story-deck">${esc(copy.deck)}</p>
+        <div class="story-cover"><div class="story-cover-back">${screen(p.gallery[0])}</div><div class="story-cover-front">${screen(p.gallery[4], true)}</div></div>
+        <p class="story-note">${esc(p.galleryNote)}</p>
+      </div></header>
+      <div class="wrap story-overview"><div><p class="story-eyebrow">OVERVIEW</p><h2>${esc(copy.overview)}</h2><p>${esc(p.summary)}</p></div>
+        <dl class="story-facts"><div><dt>${T.role}</dt><dd>${esc(p.role)}</dd></div><div><dt>${T.period}</dt><dd>${esc(p.period)}</dd></div><div><dt>${T.context}</dt><dd>${esc(p.org)}</dd></div><div><dt>${T.links}</dt><dd>${links}</dd></div></dl></div>
+      ${chapter('01', T.problem, `<p>${esc(p.problem)}</p>`)}
+      <div class="story-band">${chapter('02', copy.decision, `<p>${esc(p.approach)}</p><blockquote>${esc(copy.principle)}</blockquote>`)}
+      <figure class="story-wide"><img src="${p.figures[1].src}" alt="${esc(p.figures[1].caption)}" loading="lazy"/><figcaption>${esc(p.figures[1].caption)}</figcaption></figure></div>
+      ${chapter('03', copy.experience, `<p>${esc(copy.experienceIntro)}</p>`)}
+      ${copy.steps.map((step, i) => `<section class="story-feature ${i % 2 ? 'story-feature-reverse' : ''}"><div class="story-feature-text"><span class="story-eyebrow">${String(i + 1).padStart(2, '0')} / ${ko ? '사용자 경험' : 'THE EXPERIENCE'}</span><h2>${esc(step.title)}</h2><p>${esc(step.body)}</p></div><figure>${screen(p.gallery[step.image])}<figcaption>${esc(p.gallery[step.image].caption)}</figcaption></figure></section>`).join('')}
+      <section class="story-demo"><div class="story-copy"><span class="story-index">04</span><h2>${T.demo}</h2></div><div class="story-wide video"><iframe src="https://www.youtube-nocookie.com/embed/${p.video}" title="${esc(p.title)} — ${esc(T.demo)}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div></section>
+      ${chapter('05', copy.behind, `<p>${esc(copy.behindIntro)}</p>`)}
+      <figure class="story-wide"><img src="${p.figures[0].src}" alt="${esc(p.figures[0].caption)}" loading="lazy"/><figcaption>${esc(p.figures[0].caption)}</figcaption></figure>
+      <figure class="story-wide story-privacy">${screen(p.gallery[3])}<figcaption>${esc(p.gallery[3].caption)}</figcaption></figure>
+      <div class="story-details">${p.sections.map(s => `<section class="story-detail"><h2>${esc(s.heading)}</h2><ul class="bullets">${s.bullets.map(b => `<li>${hl(b)}</li>`).join('')}</ul></section>`).join('')}</div>
+      <section class="story-results"><div class="wrap"><p class="story-eyebrow">${ko ? '구현 및 평가' : 'IMPLEMENTATION & EVALUATION'}</p><h2>${esc(copy.results)}</h2><div class="story-metrics">${p.metrics.map(m => `<div><strong>${esc(m.value)}</strong><p>${esc(m.label)}</p></div>`).join('')}</div><p class="story-note">${esc(copy.resultNote)}</p></div></section>
+      <section class="story-copy"><h2>${T.stack}</h2><div class="chips">${p.stack.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div></section>
+      <nav class="pager wrap" aria-label="${ko ? '다른 프로젝트' : 'Other projects'}"><a href="project.html?id=${prev.id}" style="--tint:var(--${prev.tint})"><span class="lbl">← ${T.prev}</span><span class="t">${esc(prev.title)}</span></a><a href="project.html?id=${next.id}" style="--tint:var(--${next.tint})"><span class="lbl">${T.next} →</span><span class="t">${esc(next.title)}</span></a></nav>
+    </article>`;
+  }
 
   // ------------------------------------------------------------ reveal
   let io;

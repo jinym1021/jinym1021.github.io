@@ -443,3 +443,132 @@ p, li, dd, blockquote, .lede, .p-sub { text-wrap: pretty; }
   .filters.centered { margin-bottom: 48px; }
   .panels.grid.airy { gap: 56px; }
 }
+
+/* Ask-Insurance: editorial case study with full-width color chapters. */
+.insurance-story { --story-tint: var(--sky); --story-soft: var(--sage); }
+.story-hero { background: var(--story-tint); padding: 32px 0 40px; overflow: hidden; }
+.story-back { display: inline-block; font-size: 15px; margin-bottom: 48px; }
+.story-eyebrow, .story-index { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.story-hero .story-eyebrow, .story-hero h1, .story-deck { text-align: center; }
+.story-hero h1 { font: 700 clamp(36px, 5.5vw, 72px)/1.15 var(--f-title); margin: 20px 0 24px; letter-spacing: -.035em; }
+.story-deck { font-size: clamp(19px, 2vw, 25px); margin: 0 auto; max-width: 700px; }
+.story-cover { position: relative; max-width: 1040px; margin: 64px auto 32px; padding: 80px 0 0 21%; }
+.story-cover-back { position: absolute; width: 69%; left: 0; top: 0; transform: rotate(-4deg); }
+.story-cover-front { position: relative; transform: rotate(2deg); }
+.story-browser { display: block; overflow: hidden; background: var(--window); border: 1px solid var(--window-line); border-radius: 10px; box-shadow: 0 16px 40px #122e4914; }
+.story-browser img { width: 100%; height: auto; }
+.story-browser-bar { height: 28px; display: flex; gap: 5px; align-items: center; padding: 0 12px; border-bottom: 1px solid var(--window-line); }
+.story-browser-bar i { width: 5px; height: 5px; border-radius: 50%; background: var(--muted); opacity: .4; }
+.story-browser-bar span { margin: auto; font-size: 9px; color: var(--muted); padding-right: 25px; }
+.story-note { color: var(--ink-2); font-size: 13px; text-align: center; max-width: 780px; margin: 24px auto 0; }
+.story-overview { display: grid; grid-template-columns: 1.4fr 1fr; gap: 96px; padding-top: 96px; padding-bottom: 80px; }
+.insurance-story h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.3; letter-spacing: -.025em; margin: 16px 0 24px; }
+.story-overview p, .story-copy p, .story-feature-text p { color: var(--ink-2); line-height: 1.85; }
+.story-facts { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-content: start; }
+.story-facts dt { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.story-facts dd { margin: 0; font-size: 15px; color: var(--ink-2); }
+.story-facts a { text-decoration: underline; text-underline-offset: 4px; }
+.story-copy { max-width: 788px; margin: auto; padding: 72px 24px; }
+.story-index { color: var(--muted); }
+.story-band { background: var(--story-soft); padding-bottom: 72px; }
+.story-copy blockquote { font-size: clamp(23px, 3vw, 32px); line-height: 1.5; margin: 40px 0 0; padding-left: 24px; border-left: 3px solid var(--ink); }
+.story-wide { width: calc(100% - 48px); max-width: 1120px; margin: 0 auto; }
+.story-wide img { width: 100%; border-radius: 8px; }
+.insurance-story figcaption { font-size: 13px; color: var(--ink-2); margin-top: 16px; line-height: 1.6; }
+.story-feature { max-width: 1268px; padding: 56px 24px 72px; margin: auto; display: grid; grid-template-columns: 1fr 1.8fr; gap: 64px; align-items: center; }
+.story-feature figure { margin: 0; min-width: 0; padding: 32px; background: var(--story-tint); }
+.story-feature-reverse { grid-template-columns: 1.8fr 1fr; }
+.story-feature-reverse figure { order: -1; background: var(--story-soft); }
+.story-demo { padding-bottom: 80px; background: var(--story-tint); margin-top: 48px; }
+.story-details { max-width: 1120px; margin: 48px auto 80px; padding: 0 24px; }
+.story-detail { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; padding: 40px 0; border-top: 1px solid var(--line); }
+.story-detail h2 { font-size: 24px; margin: 0; }
+.story-detail ul { margin-top: 0; }
+.story-results { padding: 72px 0; background: var(--story-soft); }
+.story-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 48px 0; }
+.story-metrics strong { font-size: clamp(32px, 4vw, 52px); letter-spacing: -.03em; font-weight: 500; }
+.story-metrics p { font-size: 15px; color: var(--ink-2); }
+.story-results .story-note { text-align: left; margin-left: 0; }
+@media (max-width: 900px) {
+  .story-overview { gap: 40px; }
+  .story-feature, .story-feature-reverse { grid-template-columns: 1fr; gap: 24px; }
+  .story-feature-reverse figure { order: 0; }
+  .story-feature-text { max-width: 740px; }
+  .story-detail { gap: 32px; }
+}
+@media (max-width: 600px) {
+  .story-back { margin-bottom: 32px; }
+  .story-cover { margin-top: 40px; padding-top: 48px; padding-left: 12%; }
+  .story-cover-back { width: 78%; }
+  .story-overview { grid-template-columns: 1fr; padding-top: 56px; padding-bottom: 24px; }
+  .story-copy { padding-top: 48px; padding-bottom: 48px; }
+  .story-feature { padding-top: 24px; padding-bottom: 40px; }
+  .story-feature figure { padding: 16px; }
+  .story-detail { grid-template-columns: 1fr; gap: 16px; }
+  .story-metrics { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .story-facts { grid-template-columns: 1fr; }
+}
+
+.story-privacy { margin-top: 48px; max-width: 900px; }
+
+/* Card previews share one viewport regardless of image or HTML content. */
+.panels.grid .panel { min-height: 560px; }
+.panels.grid .panel .stage {
+  position: absolute;
+  inset: 50% 0 0 16%;
+  margin: 0;
+  padding: 0;
+}
+.panels.grid .panel .stage > .win,
+.panels.grid .panel .stage > .shot {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.panels.grid .panel .shot img {
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: top left;
+}
+@media (max-width: 600px) {
+  .panels.grid .panel { aspect-ratio: auto; min-height: 580px; }
+  .panels.grid .panel .stage { top: 54%; }
+}
+
+/* Screenshot previews use a browser frame, matching the diagram windows. */
+.shot { display: flex; flex-direction: column; border: 1px solid var(--window-line); border-bottom: 0; }
+.shot-bar { display: flex; align-items: center; gap: 16px; flex: 0 0 44px; padding: 0 16px; background: var(--window); border-bottom: 1px solid var(--window-line); color: var(--ink-2); }
+.shot-controls { display: flex; gap: 8px; flex-shrink: 0; }
+.shot-controls i { width: 10px; height: 10px; border-radius: 50%; background: var(--skeleton); }
+.shot-title { font-size: 12px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.panels.grid .panel .shot img { flex: 1; min-height: 0; height: 0; }
+
+/* Shared editorial layout, with each project's existing palette. */
+.editorial-story .story-hero h1 { max-width: 1050px; margin-left: auto; margin-right: auto; font-size: clamp(34px, 5vw, 64px); overflow-wrap: anywhere; }
+.editorial-story .story-deck { max-width: 800px; }
+.editorial-story .story-band { padding-bottom: 0; }
+.editorial-story .story-feature h2 { font-size: clamp(24px, 2.6vw, 32px); }
+.editorial-story .story-browser img { width: 100%; height: auto; }
+.story-cover-single { padding: 0; max-width: 960px; }
+.story-cover-single .story-cover-front { transform: none; }
+.story-concept { max-width: 900px; margin: 56px auto 0; text-align: left; }
+.story-concept > .win { width: 100%; transform: none; }
+.editorial-story .story-detail h2 { margin-top: 12px; }
+.editorial-story .story-metrics { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.editorial-story .story-facts, .editorial-story .story-overview > div, .story-detail > * { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .story-concept { overflow-x: auto; padding-bottom: 12px; }
+  .story-concept > .win { min-width: 480px; }
+  .editorial-story .story-metrics { grid-template-columns: 1fr 1fr; }
+  .editorial-story .story-metrics strong { font-size: 30px; overflow-wrap: anywhere; }
+}
+@media (max-width: 600px) {
+  .story-concept > .win { min-width: 0; border-radius: 12px; font-size: 11px; }
+  .story-concept .win-body { padding: 12px; }
+  .story-concept .code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 11px; }
+  .story-concept .m-row { gap: 8px; }
+  .story-concept .m-card { padding: 8px; min-width: 0; }
+  .story-concept .badge { white-space: normal; font-size: 9px; padding: 3px 5px; }
+  .story-concept .node { padding: 8px; }
+}
