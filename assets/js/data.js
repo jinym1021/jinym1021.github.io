@@ -121,10 +121,10 @@ const en = {
           heading: "AI Platform PoC Lead",
           year: "2026 H2 – now",
           bullets: [
-            "Lead PoCs for the AI platforms usable on the group's Internal Business Network: M365 Copilot from pre-adoption PoC through post-adoption support (2026.06–09), and hands-on testing of FabriX 1.7 (Samsung SDS's in-house AI platform)",
+            "Lead PoCs for the AI platforms usable on the group's Internal Business Network: M365 Copilot from pre-adoption PoC through post-adoption support (2026.06–09), and hands-on testing of FabriX 1.7.1 (Samsung SDS's in-house AI platform) since 2026.09.09",
             "Scoped M365 license tiers (E3/E5) and features before 4 affiliates confirmed adoption, including the security features regulators expect as audit evidence; tested Work IQ early and wrote setup guides",
             "Conducted interviews for Samsung Securities and participated in Microsoft Q&A on roadmap and security; findings were shared with all four affiliates through a council operated by a colleague",
-            "Tested FabriX 1.7 hands-on and compared its capabilities with GenOS to assess use within the financial internal business network",
+            "Tested FabriX 1.7.1 hands-on and compared its capabilities with GenOS to assess use within the financial internal business network",
             "Co-produce A.TechFlow, the internal monthly AI technology newsletter, in a team of 3: planning, editing and writing (#10–#13, 2026.06–)",
           ],
         },
@@ -237,20 +237,20 @@ const en = {
   "tint": "rose",
   "visual": "fabrix",
   "no": "P-01",
-  "title": "FabriX 1.7 PoC & GenOS Comparison",
+  "title": "FabriX 1.7.1 PoC & GenOS Comparison",
   "subtitle": "Assessing practical use within the financial internal business network",
   "category": "work",
   "org": "Samsung Finance AI Center",
-  "period": "2026.08 – Present",
+  "period": "2026.09.09 – Present",
   "ongoing": true,
-  "role": "Hands-on FabriX 1.7 testing and GenOS comparison",
+  "role": "Hands-on FabriX 1.7.1 testing and GenOS comparison",
   "featured": true,
-  "summary": "Tested FabriX 1.7 and compared it with GenOS to understand which capabilities were usable within the financial internal business network and how the platforms overlapped.",
+  "summary": "Tested FabriX 1.7.1 and compared it with GenOS to understand which capabilities were usable within the financial internal business network and how the platforms overlapped.",
   "problem": "The group platform and affiliate platforms needed to be assessed against actual financial-network use, including capabilities and constraints.",
-  "approach": "Test FabriX 1.7 directly and compare its capabilities with GenOS, keeping observed behavior separate from other team members’ analysis of future releases.",
+  "approach": "Test FabriX 1.7.1 directly and compare its capabilities with GenOS, keeping observed behavior separate from other team members’ analysis of future releases.",
   "metrics": [
     {
-      "value": "1.7",
+      "value": "1.7.1",
       "label": "FabriX version tested"
     },
     {
@@ -267,7 +267,7 @@ const en = {
     {
       "heading": "My role and team scope",
       "bullets": [
-        "I conducted the hands-on FabriX 1.7 tests and the GenOS comparison. Other team members handled the 2.0 analysis and the remaining comparisons and reporting."
+        "I conducted the hands-on FabriX 1.7.1 tests and the GenOS comparison. Other team members handled the 2.0 analysis and the remaining comparisons and reporting."
       ]
     },
     {
@@ -280,132 +280,121 @@ const en = {
   ]
 },
     {
-  "id": "m365-adoption",
-  "tint": "mint",
-  "visual": "m365",
-  "no": "P-02",
-  "title": "M365 Copilot PoC & Adoption Support",
-  "subtitle": "Feature testing, practical guides and securities-user research",
-  "category": "work",
-  "org": "Samsung Finance AI Center",
-  "period": "2026.06 – 2026.09",
-  "role": "Feature PoC, skill setup, Work IQ guides, Securities interviews and Microsoft Q&A",
-  "featured": true,
-  "summary": "Tested M365 Copilot from June through late September 2026, configured skill usage and wrote Work IQ guides. I conducted interviews for Samsung Securities; findings were shared across four affiliates through a colleague-operated council.",
-  "problem": "Adoption required understanding how features worked in the financial workplace, how document policies affected use, and what employees needed beyond the product feature list.",
-  "approach": "Combine hands-on tests with interviews, clarify roadmap and security questions with Microsoft, and turn findings into reusable guidance.",
-  "metrics": [
-    {
-      "value": "4",
-      "label": "months of continuous PoC"
-    },
-    {
-      "value": "4",
-      "label": "affiliates receiving shared findings"
-    }
-  ],
-  "stack": [
-    "M365 Copilot",
-    "SharePoint",
-    "OneNote",
-    "Notebooks",
-    "Work IQ"
-  ],
-  "links": [],
-  "sections": [
-    {
-      "heading": "My responsibility",
-      "bullets": [
-        "I owned the feature tests, skill-usage setup and Work IQ analysis and guides described here. I was responsible for the Securities interviews; a colleague operated the cross-affiliate council."
-      ]
-    },
-    {
-      "heading": "Feature testing and skill usage",
-      "bullets": [
-        "Tested M365 features throughout June–September, including OneNote and Notebooks in August.",
-        "I adapted an existing skill-creator for internal use, adding output-based naming prefixes, category-based SharePoint storage rules and a shared DESIGN.md reference requirement for Word and PowerPoint skills, then stored it in SharePoint. Users could mention the document with @ or attach it in Copilot chat to create a task-specific skill.",
-        "Users downloaded the generated skill, uploaded it to SharePoint and reused it by mentioning or attaching the document in later chats. I established this creation, storage and reuse workflow within the existing M365 environment."
-      ]
-    },
-    {
-      "heading": "Work IQ deep dive",
-      "bullets": [
-        "Investigated Work IQ and wrote concept, onboarding and reference guides to explain setup and how work information became available to Copilot."
-      ]
-    },
-    {
-      "heading": "Interviews and Microsoft Q&A",
-      "bullets": [
-        "From late July, interviewed Securities practitioners about adoption, document import/export policies, functionality and performance, organization and operations, and multi-platform AI strategy.",
-        "Interviewed users about their work, use cases, practical tips and improvement requests; participated in Microsoft Q&A on technical roadmap and security."
-      ]
-    },
-    {
-      "heading": "Outputs and sharing",
-      "bullets": [
-        "Produced test findings, skill-usage materials, Work IQ guides and interview findings. These were shared with all four affiliates through the working council."
-      ]
-    }
-  ]
-},
-    {
-      id: "workiq-guide",
-      no: "P-03",
-      tint: "sky",
-      visual: "image",
-      image: { src: "assets/img/workiq-setup-guide.jpg", alt: "Work IQ setup guide: four steps, twelve items, about 30 minutes" },
-      galleryNote: "Pages from the three guides (in Korean). Screenshots of the tenant itself are left out.",
-      gallery: [
-        { src: "assets/img/workiq-setup-guide.jpg", caption: "Setup guide — four steps, twelve items, a progress checklist" },
-        { src: "assets/img/workiq-setup-step.jpg", caption: "Each item: lead time, how to do it, and how to check it worked" },
-        { src: "assets/img/workiq-architecture.jpg", caption: "Concept guide — Work IQ in five layers, Data · Memory · Inference at the core" },
-        { src: "assets/img/workiq-lead-times.jpg", caption: "Reference — lead-time guidance for 14 kinds of change" },
-        { src: "assets/img/workiq-poc-results.jpg", caption: "Reference — PoC test results and what they mean for the guide" },
-      ],
-      title: "Work IQ Onboarding Guide",
-      subtitle: "Getting M365 Copilot to actually find your work",
-      category: "work",
-      org: "Samsung Finance AI Center",
-      period: "2026.08 – 2026.09",
-      role: "Ran the PoC and wrote the three-part guide",
-      summary:
-        "A three-part guide (concept, setup, reference) that explains Microsoft Work IQ and what employees need to set up so Copilot answers from their own work data, backed by measured lead times.",
-      problem:
-        "Users asked why Copilot could not find saved documents, and I encountered the same issue in my own use. I investigated settings, retrieval behavior and update timing to turn these issues into practical guidance.",
-      approach:
-        "I measured it. A PoC on Samsung Life’s M365 tenant timed how quickly each change showed up in Copilot Chat, and the results became a checklist-style setup guide and a set of team file rules.",
-      metrics: [
-        { value: "14", label: "change types covered in the timing guide" },
-        { value: "12", label: "file management rules" },
-        { value: "~30 min", label: "first-time setup, no admin rights" },
-      ],
-      stack: ["M365 Copilot", "Work IQ", "SharePoint", "OneDrive", "HTML"],
-      links: [],
-      sections: [
-        {"heading": "Observed problems and practical guidance", "bullets": ["Tests were conducted on the Samsung Life tenant in Copilot Chat web from August 27 to September 4, 2026. Findings describe that environment and period.", "In a test case I constructed, answers mixed document revisions when effective-date metadata was absent. Adding date fields produced consistent selection of the intended revision in the test, informing guidance to manage version and validity dates as library columns.", "A document missing from general search could still be read when its link was specified. I recommended explicitly referencing urgent documents and rechecking update visibility in a fresh session the following day."]},
+      "id": "m365-adoption",
+      "tint": "mint",
+      "visual": "m365",
+      "no": "P-02",
+      "image": {
+        "src": "assets/img/workiq-setup-guide.jpg",
+        "alt": "Work IQ setup guide written during the PoC: four steps, twelve items, about 30 minutes"
+      },
+      "galleryNote": "Pages from the Work IQ guides I wrote during the PoC (in Korean). Screenshots of the tenant itself are left out.",
+      "gallery": [
         {
-          heading: "Concept",
-          bullets: [
-            "Work IQ explained as three layers (Data, Memory, Inference), plus the API surface and governance around them",
-            "Where it sits next to Fabric IQ, Foundry IQ and Web IQ",
-          ],
+          "src": "assets/img/workiq-setup-guide.jpg",
+          "caption": "Work IQ setup guide — four steps, twelve items, a progress checklist"
         },
         {
-          heading: "Setup guide",
-          bullets: [
-            "4 steps, 12 items: settings, profile, OneDrive, SharePoint; each with lead time, why it matters and how to check",
-            "Built-in progress checklist, so people can work through it on their own",
-          ],
+          "src": "assets/img/workiq-setup-step.jpg",
+          "caption": "Work IQ setup guide — each item: lead time, how to do it, and how to check it worked"
         },
         {
-          heading: "Reference",
-          bullets: [
-            "Lead-time cheat sheet: e.g. new OneNote pages searchable in ~2 minutes, new SharePoint documents visible to colleagues the next day",
-            "File rules written to be pasted straight into a team notice",
-            "6 PoC tests run between 2026.08.27 and 09.04",
-          ],
+          "src": "assets/img/workiq-architecture.jpg",
+          "caption": "Work IQ concept guide — five layers, Data · Memory · Inference at the core"
         },
+        {
+          "src": "assets/img/workiq-lead-times.jpg",
+          "caption": "Work IQ reference — lead-time guidance for 14 kinds of change"
+        },
+        {
+          "src": "assets/img/workiq-poc-results.jpg",
+          "caption": "Work IQ reference — PoC test results and what they mean for the guide"
+        }
       ],
+      "title": "M365 Copilot PoC & Adoption Support",
+      "subtitle": "Feature testing, a skill workflow, Work IQ onboarding guides and securities-user research",
+      "category": "work",
+      "org": "Samsung Finance AI Center",
+      "period": "2026.06 – 2026.09",
+      "role": "Feature PoC, skill workflow setup, Work IQ analysis and onboarding guides, Securities interviews and Microsoft Q&A",
+      "featured": true,
+      "summary": "Tested M365 Copilot from June through late September 2026. Within the PoC I set up a SharePoint-based skill workflow and, prompted by users asking why Copilot could not find their saved documents, analysed Work IQ and wrote a three-part onboarding guide. I conducted interviews for Samsung Securities; findings were shared across four affiliates through a colleague-operated council.",
+      "problem": "Adoption required understanding how features worked in the financial workplace, how document policies affected use, and what employees needed beyond the product feature list. Users also asked why Copilot could not find documents they had saved, and I ran into the same issue in my own use.",
+      "approach": "Combine hands-on tests with interviews, clarify roadmap and security questions with Microsoft, and turn findings into reusable guidance. For Work IQ, I built test cases on the Samsung Life tenant (2026.08.27–09.04) and turned the observations into a checklist-style setup guide and team file rules.",
+      "metrics": [
+        {
+          "value": "4",
+          "label": "months of continuous PoC"
+        },
+        {
+          "value": "4",
+          "label": "affiliates receiving shared findings"
+        },
+        {
+          "value": "3",
+          "label": "Work IQ guides: concept · setup · reference"
+        },
+        {
+          "value": "14",
+          "label": "change types in the Work IQ lead-time guide"
+        }
+      ],
+      "stack": [
+        "M365 Copilot",
+        "Work IQ",
+        "SharePoint",
+        "OneDrive",
+        "OneNote",
+        "Notebooks",
+        "HTML"
+      ],
+      "links": [],
+      "sections": [
+        {
+          "heading": "My responsibility",
+          "bullets": [
+            "I owned the feature tests, skill-workflow setup, and the Work IQ analysis and onboarding guides described here. I was responsible for the Securities interviews; a colleague operated the cross-affiliate council."
+          ]
+        },
+        {
+          "heading": "Feature testing and skill usage",
+          "bullets": [
+            "Tested M365 features throughout June–September, including OneNote and Notebooks in August.",
+            "I adapted an existing skill-creator for internal use, adding output-based naming prefixes, category-based SharePoint storage rules and a shared DESIGN.md reference requirement for Word and PowerPoint skills, then stored it in SharePoint. Users could mention the document with @ or attach it in Copilot chat to create a task-specific skill.",
+            "Users downloaded the generated skill, uploaded it to SharePoint and reused it by mentioning or attaching the document in later chats. I established this creation, storage and reuse workflow within the existing M365 environment."
+          ]
+        },
+        {
+          "heading": "Work IQ: why Copilot missed saved documents",
+          "bullets": [
+            "Started from user questions and my own experience, then investigated settings, retrieval behavior and update timing.",
+            "Ran 6 tests on the Samsung Life tenant in Copilot Chat web from August 27 to September 4, 2026. Findings describe that environment and period, not official Microsoft update times.",
+            "In a test case I constructed, answers mixed document revisions when effective-date metadata was absent. Adding date fields produced consistent selection of the intended revision in the test, informing guidance to manage version and validity dates as library columns.",
+            "A document missing from general search could still be read when its link was specified. I recommended explicitly referencing urgent documents and rechecking update visibility in a fresh session the following day."
+          ]
+        },
+        {
+          "heading": "Work IQ onboarding guide (three parts)",
+          "bullets": [
+            "Concept: Work IQ explained as three layers (Data, Memory, Inference), plus the API surface and governance around them, and where it sits next to Fabric IQ, Foundry IQ and Web IQ",
+            "Setup: 4 steps, 12 items (settings, profile, OneDrive, SharePoint), each with lead time, why it matters and how to check; a built-in progress checklist lets people finish first-time setup in about 30 minutes without admin rights",
+            "Reference: a lead-time cheat sheet for 14 kinds of change (e.g. in the tests, new OneNote pages searchable in ~2 minutes, new SharePoint documents visible to colleagues the next day) and 12 file rules written to be pasted straight into a team notice"
+          ]
+        },
+        {
+          "heading": "Interviews and Microsoft Q&A",
+          "bullets": [
+            "From late July, interviewed Securities practitioners about adoption, document import/export policies, functionality and performance, organization and operations, and multi-platform AI strategy.",
+            "Interviewed users about their work, use cases, practical tips and improvement requests; participated in Microsoft Q&A on technical roadmap and security."
+          ]
+        },
+        {
+          "heading": "Outputs and sharing",
+          "bullets": [
+            "Produced test findings, skill-usage materials, the Work IQ onboarding guide and interview findings. These were shared with all four affiliates through the working council."
+          ]
+        }
+      ]
     },
     {
       id: "skill-hub",
@@ -1065,10 +1054,10 @@ const ko = {
           heading: "AI 플랫폼 PoC 담당",
           year: "2026 하반기 – 현재",
           bullets: [
-            "금융 3호망(내부 업무망)에서 쓸 수 있는 그룹 AI 플랫폼 PoC 담당: M365 Copilot 도입 전 PoC부터 도입 후 지원까지(2026년 6~9월), 삼성SDS 사내 AI 플랫폼 FabriX 1.7 직접 테스트",
+            "금융 3호망(내부 업무망)에서 쓸 수 있는 그룹 AI 플랫폼 PoC 담당: M365 Copilot 도입 전 PoC부터 도입 후 지원까지(2026년 6~9월), 삼성SDS 사내 AI 플랫폼 FabriX 1.7.1 직접 테스트(2026.09.09~)",
             "4개 관계사 M365 도입 확정 전 라이선스(E3/E5)와 기능 범위 파악(금융 감독 증적에 필요한 보안 기능 포함), Work IQ 등 기능 선제 테스트 및 가이드 제작",
             "증권 담당 실무자·사용자 인터뷰와 기술 로드맵·보안 관련 MS 질의응답 수행. 결과는 다른 담당자가 운영하는 협의체를 통해 4사에 공유",
-            "FabriX 1.7 직접 테스트와 GenOS 기능 비교를 담당해 금융사 내부 업무망에서의 활용 범위 검토",
+            "FabriX 1.7.1 직접 테스트와 GenOS 기능 비교를 담당해 금융사 내부 업무망에서의 활용 범위 검토",
             "사내 월간 AI 기술 뉴스레터 A.TechFlow 3인 공동 제작: 기획·편집·집필(10~13호, 2026년 6월~)",
           ],
         },
@@ -1152,17 +1141,17 @@ const ko = {
 
   projects: [
     {
-  "title": "FabriX 1.7 PoC와 GenOS 비교",
+  "title": "FabriX 1.7.1 PoC와 GenOS 비교",
   "subtitle": "금융사 내부 업무망에서의 실제 활용 범위 검토",
-  "period": "2026.08 – 현재",
+  "period": "2026.09.09 – 현재",
   "org": "삼성금융 AI센터",
-  "role": "FabriX 1.7 직접 테스트, GenOS 기능 비교",
-  "summary": "FabriX 1.7을 직접 테스트하고 GenOS와 비교해, 금융사 내부 업무망에서 사용할 수 있는 기능과 기존 플랫폼 대비 활용 범위를 검토했습니다.",
+  "role": "FabriX 1.7.1 직접 테스트, GenOS 기능 비교",
+  "summary": "FabriX 1.7.1을 직접 테스트하고 GenOS와 비교해, 금융사 내부 업무망에서 사용할 수 있는 기능과 기존 플랫폼 대비 활용 범위를 검토했습니다.",
   "problem": "그룹 공통 플랫폼과 관계사 플랫폼을 실제 금융 업무망의 사용 조건에 맞춰 비교하고, 제공 기능과 제약을 확인해야 했습니다.",
-  "approach": "FabriX 1.7에서 실제 동작을 확인하고 GenOS와 기능을 비교했습니다. 직접 테스트한 범위와 다른 팀원이 수행한 차기 버전 분석을 구분했습니다.",
+  "approach": "FabriX 1.7.1에서 실제 동작을 확인하고 GenOS와 기능을 비교했습니다. 직접 테스트한 범위와 다른 팀원이 수행한 차기 버전 분석을 구분했습니다.",
   "metrics": [
     {
-      "value": "1.7",
+      "value": "1.7.1",
       "label": "직접 테스트한 FabriX 버전"
     },
     {
@@ -1174,7 +1163,7 @@ const ko = {
     {
       "heading": "내 역할과 협업 범위",
       "bullets": [
-        "FabriX 1.7 직접 테스트와 GenOS 비교를 담당했습니다. 2.0 분석을 비롯한 나머지 비교·보고 업무는 다른 담당자들이 수행했습니다."
+        "FabriX 1.7.1 직접 테스트와 GenOS 비교를 담당했습니다. 2.0 분석을 비롯한 나머지 비교·보고 업무는 다른 담당자들이 수행했습니다."
       ]
     },
     {
@@ -1187,108 +1176,99 @@ const ko = {
   ]
 },
     {
-  "title": "M365 Copilot PoC와 활용 지원",
-  "subtitle": "기능 검증·사용 가이드·증권 현업 인터뷰",
-  "period": "2026.06 – 2026.09",
-  "org": "삼성금융 AI센터",
-  "role": "기능 PoC, 스킬 사용 환경 구성, Work IQ 가이드, 증권 인터뷰, MS 질의응답",
-  "summary": "2026년 6월부터 9월 말까지 M365 Copilot 기능을 테스트하고 스킬 활용 환경과 Work IQ 가이드를 만들었습니다. 증권 담당으로 실무자·사용자 인터뷰를 수행했으며, 결과는 협의체를 통해 4사에 공유됐습니다.",
-  "problem": "금융 업무에서 M365를 활용하려면 기능 소개뿐 아니라 실제 동작, 문서 반입·반출 정책, 운영 방식과 사용자의 업무 요구를 함께 파악해야 했습니다.",
-  "approach": "기능을 직접 테스트하고 현업의 사용 맥락을 인터뷰했습니다. 기술 로드맵·보안 관련 질문은 MS 질의응답으로 확인하고, 결과를 실무 가이드와 공유 자료로 정리했습니다.",
-  "metrics": [
-    {
-      "value": "4",
-      "label": "개월간 지속한 PoC"
-    },
-    {
-      "value": "4",
-      "label": "결과를 공유받은 관계사"
-    }
-  ],
-  "sections": [
-    {
-      "heading": "내 역할과 협업 범위",
-      "bullets": [
-        "기능 테스트, 스킬 사용 환경 구성, Work IQ 분석·가이드 작성을 담당했습니다. 인터뷰는 증권 담당으로 수행했고, 4사 협의체 운영은 다른 담당자가 맡았습니다."
-      ]
-    },
-    {
-      "heading": "기능 테스트와 스킬 활용",
-      "bullets": [
-        "6월부터 9월 말까지 M365 기능을 지속적으로 테스트했습니다. 8월에는 OneNote와 Notebooks를 검토했습니다.",
-        "기존 skill-creator를 사내 사용에 맞게 수정했습니다. 최종 산출물에 따른 기능별 이름 접두어, SharePoint의 유형별 저장 위치, Word·PPT 스킬의 공용 DESIGN.md 참조 규칙을 반영하고 SharePoint에 저장했습니다. 사용자는 Copilot 채팅에서 해당 문서를 @로 언급하거나 첨부해 업무용 스킬을 생성할 수 있도록 했습니다.",
-        "생성된 스킬을 다운로드한 뒤 SharePoint에 다시 업로드하고, 이후 채팅에서도 @로 언급하거나 첨부해 재사용하는 흐름을 마련했습니다. 스킬 생성부터 저장·재사용까지 기존 M365 환경 안에서 이어지도록 구성했습니다."
-      ]
-    },
-    {
-      "heading": "Work IQ 분석과 가이드",
-      "bullets": [
-        "Work IQ를 심층 분석하고 개념·온보딩·레퍼런스 가이드를 작성했습니다. 사용자가 필요한 설정과 업무 정보가 Copilot에 반영되는 과정을 이해하도록 정리했습니다."
-      ]
-    },
-    {
-      "heading": "증권 인터뷰와 MS 질의응답",
-      "bullets": [
-        "7월 말부터 증권 실무자를 대상으로 도입 현황, 문서 반입·반출 정책, 기능·성능, 조직·운영 방식, 멀티 AI 플랫폼 전략을 조사했습니다.",
-        "사용자에게는 실제 업무, 활용 사례, 사용 팁과 개선 의견을 확인했습니다. 기술 로드맵·보안 등에 관한 MS 질의응답도 수행했습니다."
-      ]
-    },
-    {
-      "heading": "산출물과 공유",
-      "bullets": [
-        "기능 테스트 결과, 스킬 활용 자료, Work IQ 가이드, 인터뷰 결과를 정리했습니다. 이 내용은 실무 협의체를 통해 금융 4사에 공유됐습니다."
-      ]
-    }
-  ]
-},
-    {
-      title: "Work IQ 온보딩 가이드",
-      image: { alt: "Work IQ 세팅 가이드: 4단계 12개 항목, 첫 세팅 약 30분" },
-      galleryNote: "3부작 가이드의 실제 페이지입니다. 테넌트 화면 캡처는 제외했습니다.",
-      gallery: [
-        { caption: "세팅 가이드 — 4단계 12개 항목과 진행 체크리스트" },
-        { caption: "항목마다 리드타임, 하는 방법, 확인 방법" },
-        { caption: "개념 가이드 — Work IQ를 5개 계층으로, 핵심은 Data · Memory · Inference" },
-        { caption: "레퍼런스 — 변경 유형 14개의 반영 시간 안내" },
-        { caption: "레퍼런스 — PoC 테스트 결과와 가이드에 반영한 시사점" },
-      ],
-      subtitle: "M365 Copilot이 내 업무 자료를 제대로 찾게 하기",
-      org: "삼성금융 AI센터",
-      role: "PoC 수행, 3부작 가이드 작성",
-      summary: "Microsoft Work IQ의 구조와, Copilot이 내 업무 데이터로 답하게 하려면 무엇을 설정해야 하는지를 개념·세팅·레퍼런스 3부작으로 정리했습니다. 2026년 8~9월 생명 테넌트에서 수행한 테스트 결과와 관찰 내용을 반영했습니다.",
-      problem: "사용자로부터 저장한 자료를 Copilot이 찾지 못한다는 문의를 받았고, 직접 사용하는 과정에서도 같은 문제를 경험했습니다. 설정·검색 동작·변경 반영 시간을 조사해 사용자가 따라 할 수 있는 가이드로 정리했습니다.",
-      approach: "직접 쟀습니다. 삼성생명 M365 테넌트에서 PoC를 돌려 변경 사항별 Copilot Chat 반영 시간을 측정했고, 그 결과를 체크리스트형 세팅 가이드와 팀 파일 규칙으로 만들었습니다.",
-      metrics: [
-        { value: "14개", label: "반영 시간을 정리한 항목" },
-        { value: "12개", label: "파일 관리 규칙" },
-        { value: "약 30분", label: "첫 세팅 시간, 관리자 권한 불필요" },
-      ],
-      sections: [
+      "title": "M365 Copilot PoC와 활용 지원",
+      "subtitle": "기능 검증·스킬 활용 흐름·Work IQ 온보딩 가이드·증권 현업 인터뷰",
+      "image": {
+        "alt": "PoC 중 작성한 Work IQ 세팅 가이드: 4단계 12개 항목, 첫 세팅 약 30분"
+      },
+      "galleryNote": "PoC 중 작성한 Work IQ 가이드의 실제 페이지입니다. 테넌트 화면 캡처는 제외했습니다.",
+      "gallery": [
         {
-          heading: "개념 이해하기",
-          bullets: [
-            "Work IQ를 Data·Memory·Inference 3계층과 API 표면, 거버넌스로 설명",
-            "Fabric IQ·Foundry IQ·Web IQ와의 관계 정리",
-          ],
+          "caption": "Work IQ 세팅 가이드 — 4단계 12개 항목과 진행 체크리스트"
         },
         {
-          heading: "세팅 가이드",
-          bullets: [
-            "4단계 12개 항목: 설정, 프로필, OneDrive, SharePoint — 항목마다 리드타임, 이유, 확인 방법",
-            "혼자 따라 할 수 있도록 진행 체크리스트 내장",
-          ],
+          "caption": "Work IQ 세팅 가이드 — 항목마다 리드타임, 하는 방법, 확인 방법"
         },
         {
-          heading: "레퍼런스",
-          bullets: [
-            "리드타임 요약표: 예) OneNote 새 페이지는 약 2분 뒤 검색, SharePoint 새 문서는 다음 날부터 동료에게 노출",
-            "팀 공지에 그대로 붙여 쓸 수 있는 파일 관리 규칙",
-            "2026.08.27~09.04 생명 테넌트·Copilot Chat 웹에서 6종의 테스트 수행. 관찰 결과는 해당 환경과 시점에 한정해 안내",
+          "caption": "Work IQ 개념 가이드 — 5개 계층, 핵심은 Data · Memory · Inference"
+        },
+        {
+          "caption": "Work IQ 레퍼런스 — 변경 유형 14개의 반영 시간 안내"
+        },
+        {
+          "caption": "Work IQ 레퍼런스 — PoC 테스트 결과와 가이드에 반영한 시사점"
+        }
+      ],
+      "period": "2026.06 – 2026.09",
+      "org": "삼성금융 AI센터",
+      "role": "기능 PoC, 스킬 활용 흐름 구성, Work IQ 분석·온보딩 가이드, 증권 인터뷰, MS 질의응답",
+      "summary": "2026년 6월부터 9월 말까지 M365 Copilot 기능을 테스트했습니다. PoC 안에서 SharePoint 기반 스킬 생성·재사용 흐름을 구성하고, 저장한 자료를 Copilot이 찾지 못한다는 문의를 계기로 Work IQ를 분석해 개념·세팅·레퍼런스 3부작 온보딩 가이드를 작성했습니다. 증권 담당으로 실무자·사용자 인터뷰를 수행했으며, 결과는 협의체를 통해 4사에 공유됐습니다.",
+      "problem": "금융 업무에서 M365를 활용하려면 기능 소개뿐 아니라 실제 동작, 문서 반입·반출 정책, 운영 방식과 사용자의 업무 요구를 함께 파악해야 했습니다. 저장한 자료를 Copilot이 찾지 못한다는 사용자 문의도 있었고, 직접 사용하면서 같은 문제를 경험했습니다.",
+      "approach": "기능을 직접 테스트하고 현업의 사용 맥락을 인터뷰했습니다. 기술 로드맵·보안 관련 질문은 MS 질의응답으로 확인하고, 결과를 실무 가이드와 공유 자료로 정리했습니다. Work IQ는 2026.08.27~09.04 생명 테넌트에서 테스트 케이스를 직접 구성해 확인하고, 관찰 결과를 체크리스트형 세팅 가이드와 팀 파일 규칙으로 만들었습니다.",
+      "metrics": [
+        {
+          "value": "4",
+          "label": "개월간 지속한 PoC"
+        },
+        {
+          "value": "4",
+          "label": "결과를 공유받은 관계사"
+        },
+        {
+          "value": "3종",
+          "label": "Work IQ 가이드: 개념·세팅·레퍼런스"
+        },
+        {
+          "value": "14개",
+          "label": "Work IQ 반영 시간을 정리한 변경 유형"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "내 역할과 협업 범위",
+          "bullets": [
+            "기능 테스트, 스킬 활용 흐름 구성, Work IQ 분석과 온보딩 가이드 작성을 담당했습니다. 인터뷰는 증권 담당으로 수행했고, 4사 협의체 운영은 다른 담당자가 맡았습니다."
+          ]
+        },
+        {
+          "heading": "기능 테스트와 스킬 활용",
+          "bullets": [
+            "6월부터 9월 말까지 M365 기능을 지속적으로 테스트했습니다. 8월에는 OneNote와 Notebooks를 검토했습니다.",
+            "기존 skill-creator를 사내 사용에 맞게 수정했습니다. 최종 산출물에 따른 기능별 이름 접두어, SharePoint의 유형별 저장 위치, Word·PPT 스킬의 공용 DESIGN.md 참조 규칙을 반영하고 SharePoint에 저장했습니다. 사용자는 Copilot 채팅에서 해당 문서를 @로 언급하거나 첨부해 업무용 스킬을 생성할 수 있도록 했습니다.",
+            "생성된 스킬을 다운로드한 뒤 SharePoint에 다시 업로드하고, 이후 채팅에서도 @로 언급하거나 첨부해 재사용하는 흐름을 마련했습니다. 스킬 생성부터 저장·재사용까지 기존 M365 환경 안에서 이어지도록 구성했습니다."
+          ]
+        },
+        {
+          "heading": "Work IQ 분석: Copilot이 저장한 자료를 못 찾는 이유",
+          "bullets": [
+            "사용자 문의와 직접 사용 경험에서 출발해 설정·검색 동작·변경 반영 시간을 조사했습니다.",
+            "2026.08.27~09.04 생명 테넌트·Copilot Chat 웹에서 6종의 테스트를 수행했습니다. 관찰 결과는 해당 환경과 시점에 한정해 안내했으며, 서비스의 공식 반영 시간이 아닙니다.",
             "직접 구성한 개정본 구분 테스트: 판매개시일·종료일 정보가 없을 때 서로 다른 개정본이 섞인 답변을 관찰했습니다. 날짜 메타데이터를 추가한 뒤 해당 테스트에서 특정 개정본으로 답변이 일관되는 것을 확인하고, 버전·기간을 라이브러리 열로 관리하도록 안내했습니다.",
-            "검색과 접근 구분: 일반 검색에서 찾지 못한 문서도 링크로 지정하면 읽을 수 있는 사례를 확인했습니다. 급한 문서는 직접 지정하고, 변경 반영 여부는 다음 날 새 세션에서 다시 확인하도록 가이드에 반영했습니다.",
-          ],
+            "검색과 접근 구분: 일반 검색에서 찾지 못한 문서도 링크로 지정하면 읽을 수 있는 사례를 확인했습니다. 급한 문서는 직접 지정하고, 변경 반영 여부는 다음 날 새 세션에서 다시 확인하도록 가이드에 반영했습니다."
+          ]
         },
-      ],
+        {
+          "heading": "Work IQ 온보딩 가이드(3부작)",
+          "bullets": [
+            "개념: Work IQ를 Data·Memory·Inference 3계층과 API 표면, 거버넌스로 설명하고 Fabric IQ·Foundry IQ·Web IQ와의 관계를 정리",
+            "세팅: 4단계 12개 항목(설정, 프로필, OneDrive, SharePoint) — 항목마다 리드타임, 이유, 확인 방법. 진행 체크리스트를 내장해 관리자 권한 없이 약 30분 만에 혼자 첫 세팅 가능",
+            "레퍼런스: 변경 유형 14개의 반영 시간 요약표(예: 테스트에서 OneNote 새 페이지는 약 2분 뒤 검색, SharePoint 새 문서는 다음 날부터 동료에게 노출)와 팀 공지에 그대로 붙여 쓸 수 있는 파일 관리 규칙 12개"
+          ]
+        },
+        {
+          "heading": "증권 인터뷰와 MS 질의응답",
+          "bullets": [
+            "7월 말부터 증권 실무자를 대상으로 도입 현황, 문서 반입·반출 정책, 기능·성능, 조직·운영 방식, 멀티 AI 플랫폼 전략을 조사했습니다.",
+            "사용자에게는 실제 업무, 활용 사례, 사용 팁과 개선 의견을 확인했습니다. 기술 로드맵·보안 등에 관한 MS 질의응답도 수행했습니다."
+          ]
+        },
+        {
+          "heading": "산출물과 공유",
+          "bullets": [
+            "기능 테스트 결과, 스킬 활용 자료, Work IQ 온보딩 가이드, 인터뷰 결과를 정리했습니다. 이 내용은 실무 협의체를 통해 금융 4사에 공유됐습니다."
+          ]
+        }
+      ]
     },
     {
       title: "에이전트 스킬 허브",

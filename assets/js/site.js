@@ -148,10 +148,10 @@
     fabrix: () => `
       <div class="win">${bar("FabriX · capability benchmark")}
         <div class="win-body">
-          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr"><span>Capability</span><span>FabriX 1.7</span><span>GenOS</span></div>
+          <div class="m-row m-head" style="grid-template-columns:1.4fr 1fr 1fr"><span>Capability</span><span>FabriX 1.7.1</span><span>GenOS</span></div>
           ${["Agent builder", "Internal systems / MCP", "Model gateway", "Governance &amp; audit"].map((r) => `
           <div class="m-row" style="grid-template-columns:1.4fr 1fr 1fr"><span style="color:var(--ink)">${r}</span>${sk("w70")}${sk("w55")}</div>`).join("")}
-          <div class="m-row"><span class="badge ok">1.7 tested · GenOS compared</span></div>
+          <div class="m-row"><span class="badge ok">1.7.1 tested · GenOS compared</span></div>
         </div>
       </div>`,
     m365: () => `
@@ -350,7 +350,10 @@
 
     project() {
       const T = U.project;
-      const id = new URLSearchParams(location.search).get("id");
+      // Old links: the Work IQ guide is now part of the M365 Copilot PoC case study.
+      const MOVED = { "workiq-guide": "m365-adoption" };
+      const raw = new URLSearchParams(location.search).get("id");
+      const id = MOVED[raw] || raw;
       const i = S.projects.findIndex((p) => p.id === id);
       const p = S.projects[i];
       const root = $("#case");
